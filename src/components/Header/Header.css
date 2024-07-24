@@ -1,0 +1,78 @@
+@media (max-width: 1024px) {
+    .drop {display: none !important;}
+}
+
+.dark {background: #141414; color: #fff;}
+.light {background: #fff; box-shadow: 4px 4px 10px 0 rgba(69, 129, 246, 0.15);}
+
+.dark .arrow-bottom {stroke: #fff;}
+.light .arrow-bottom {stroke: #141414;}
+
+.light a, 
+.light li {color: #141414;}
+
+header:has(.menuMobile.active) span ~ a, 
+header:has(.menuMobile.active) li,
+header:has(.menuMobile.active) a > svg { color: #fff; fill: #fff; }
+
+header:has(.menuMobile.active) li > a {color: rgb(255 255 255 / 0.6);}
+
+header:has(.menuMobile.active)::before {
+    background: #141414 !important; 
+    content: ''; 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 10;
+}
+
+header:has(.menuMobile.active) span svg { stroke: #fff; }
+
+@media (min-width: 1024px) {
+    .light li:hover > a, 
+    .light a ~ ul > li:hover, 
+    .light a:hover,
+    .dark a:hover, 
+    .dark a ~ ul > li:hover {color: #1763F4 !important;}
+    
+    .light a:hover .arrow-bottom, 
+    .light li:hover .arrow-bottom, 
+    .dark a:hover .arrow-bottom, 
+    .dark li:hover .arrow-bottom {stroke: #1763F4;}
+
+    .light li > a {color: #141414 !important; }
+}
+
+.dark a > svg {fill: rgba(255, 255, 255, 0.8); width: 3.2rem;}
+.light a > svg {fill: rgba(20, 20, 20, 0.8); width: 3.2rem;}
+
+header .btnBurger,
+header .btnBurger .line {transition: all .3s; position: relative;}
+
+header .btnBurger::before {content: ''; transition: all .3s; position: absolute; top: -7px; left: 0; width: 100%; background: #fff; height: .1rem;}
+header .btnBurger::after {content: ''; transition: all .3s; position: absolute; bottom: -7px; right: 0; width: 100%; background: #fff; height: .1rem;}
+
+header:has(.menuMobile.active) .btnBurger .line {opacity: 0;}
+header:has(.menuMobile.active) .btnBurger::before {top: 0; transform: rotate(45deg); transform-origin: center; background: #fff;}
+header:has(.menuMobile.active) .btnBurger::after {bottom: 0; transform: rotate(-45deg); transform-origin: center; background: #fff;}
+
+.line {
+    display: block;
+    width: 1.5rem;
+    height: .1rem;
+    border-radius: 50px;
+}
+
+.dark .line { background: #fff; }
+
+.light .line,
+.light .btnBurger::after,
+.light .btnBurger::before {background: #141414;}
+
+@media screen and (min-width: 1024px) and (max-width: 1065px) {
+    header { padding: 1.25rem 1rem !important; }
+
+    header ul li { width: min-content; white-space: nowrap; }
+}

@@ -1,0 +1,17 @@
+.menuMobile {top: -100vh; opacity: 0; transition: all .5s; overflow-y: auto;}
+/* .menuMobile ul li ul {animation: animMenu .5s linear; overflow: hidden;} */
+
+.menuMobile.active {top: 0; opacity: 1;}
+
+html:has(.menuMobile.active) {overflow: hidden;}
+
+.mob-social > a svg {width: 20px !important; height: 20px !important;}
+
+@keyframes animMenu {
+    0% {
+        margin-top: -100%;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
