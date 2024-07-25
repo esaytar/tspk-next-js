@@ -95,7 +95,7 @@ export default function Header() {
                     <span className="line"></span>
                 </button>
                 {/* <MenuMobile status={isActiveMenu ? 'active ' : ''}/> */}
-                <button className='rounded-[0.32rem] lg:block bg-mainBlue flex items-center justify-center hover:bg-[#0949C2] duration-[.1s]'>
+                <button className='rounded-[0.32rem] lg:flex hidden bg-mainBlue items-center justify-center hover:bg-[#0949C2] duration-[.1s]'>
                     <Image src={eye} alt="версия для слабовидящих" width={40} height={40}/>
                 </button>
             </header>
