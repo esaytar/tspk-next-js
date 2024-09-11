@@ -1,4 +1,4 @@
-import cardsInfo from '@/data/cardsInfo.js'
+import cardsInfo from '../data/cardsInfo.js'
 import LinkedCard from './LinkedCard.jsx'
 import Image from 'next/image.js'
 

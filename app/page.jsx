@@ -1,7 +1,7 @@
-import ContactsBlock from "@/components/ContactsBlock";
-import HeadBlock from "@/components/HeadBlock/HeadBlock";
-import NewsBlock from "@/components/NewsBlock";
-import QuickAccessBlock from "@/components/QuickAccessBlock";
+import ContactsBlock from "../components/ContactsBlock";
+import HeadBlock from "../components/HeadBlock/HeadBlock";
+import NewsBlock from "../components/NewsBlock";
+import QuickAccessBlock from "../components/QuickAccessBlock";
 import Image from "next/image";
 
 export default function Home() {

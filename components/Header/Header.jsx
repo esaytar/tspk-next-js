@@ -5,8 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation"
 import {useRef, useState, useEffect} from 'react'
 import './Header.css'
-import LogoTSPK from "../icons/LogoTSPK"
-import ArrowSmall from "../ArrowSmall";
+import LogoTSPK from "../ui/icons/LogoTSPK"
+import ArrowSmall from '.././ui/ArrowSmall'
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -21,7 +21,7 @@ export default function Header() {
 
     useEffect(() => {
         pathname !== '/' ? setTransparent(true) : setTransparent(false)
-    }, [pathname])
+    }, [pathname])  
 
     useEffect(() => {
         if (location.pathname === '/') {

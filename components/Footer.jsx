@@ -1,10 +1,10 @@
 import Link from 'next/link.js'
-import LogoTSPK from './icons/LogoTSPK.jsx'
+import LogoTSPK from './ui/icons/LogoTSPK.jsx'
 import DataCollegeMenu from './menu/DataCollegeMenu.jsx'
 import CollegeMenu from './menu/CollegeMenu.jsx'
 import BPOOMenu from './menu/BPOOMenu.jsx'
-import Vk from './icons/Vk.jsx'
-import Telegram from './icons/Telegram.jsx'
+import Vk from './ui/icons/Vk.jsx'
+import Telegram from './ui/icons/Telegram.jsx'
 
 export default function Footer() {
     return (

@@ -1,8 +1,8 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header/Header";
-import Footer from "@/components/Footer";
-import MarqueeBlock from "@/components/marquee/MarqueeBlock";
+import Footer from '../components/Footer'
+import MarqueeBlock from "../components/marquee/MarqueeBlock";
 
 const roboto = Roboto({ subsets: ["latin"], weight: '400' });
 

@@ -3,7 +3,7 @@
 import {useEffect, useRef, useState} from 'react'
 import NewsCard from './NewsCard'
 import { register } from 'swiper/element/bundle'
-// import alternative from '../../assets/alternative.jpg'
+import alternative from '@/img/alternative.jpg'
 import axios from 'axios'
 
 register();
@@ -18,30 +18,30 @@ export default function NewsBlock() {
         return [null, null];
     }
 
-    function getImgUrl(attachment) {
+    function getImgUrl(attachment = 'unknown') {
         if (attachment === null) return null
         switch(attachment.type) {
             case 'photo':
-                return findMaxSizes(attachment.photo.sizes, attachment.type)
+                return attachment.photo.orig_photo.url
             case 'video':
                 return findMaxSizes(attachment.video.image, attachment.type)
             case 'doc':
                 return findMaxSizes(attachment.doc.preview.photo.sizes, attachment.type)
             case 'album':
-                return findMaxSizes(attachment.album.thumb.sizes, attachment.type)
+                return attachment.album.thumb.orig_photo.url
             default:
-                return alternative
+                return findMaxSizes()
         }
     }
 
     function findMaxSizes(array, type) {
+        if (!array) return alternative.src
         let url = ''
         array.map(item => {
             if (480 <= item.width <= 630) {
                 url = type === 'doc' ? item.src : item.url
             } 
         })
-        if (url === '') return alternative
         return url
     }
 
@@ -50,7 +50,12 @@ export default function NewsBlock() {
             await axios.get('https://esaytar.github.io/tspk/data.json')
             .then(res => {
                 const newsItems = res.data.response.items.map((item, index) => {
-                    const url = getImgUrl(item.attachments.length ? item.attachments[0] : null)
+                    const findNullImage = () => {
+                        if (item.attachments.length > 0) return item.attachments[0]
+                        else if (!item.attachments.length && !item.copy_history) return
+                        else return null
+                    }
+                    const url = getImgUrl(findNullImage())
                     const [repostText, urlRepost] = checkRepost(item)
                     return (<swiper-slide key={index}>
                         <NewsCard
