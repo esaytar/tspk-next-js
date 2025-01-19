@@ -1,7 +1,7 @@
 import React from 'react'
 import ListComponent from './ListComponent'
 
-export default function Students({styles}) {
+export default function Students({styles, color}) {
     const list = [
         {
             value: 'Студентам',
@@ -31,6 +31,6 @@ export default function Students({styles}) {
     ]
     
     return (
-        <ListComponent array={list} styles={styles}/>
+        <ListComponent color={color} array={list} styles={styles}/>
     )
 }

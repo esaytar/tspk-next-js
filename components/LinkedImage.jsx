@@ -4,11 +4,9 @@ import Link from "next/link";
 export default function LinkedImage({link, image, alt}) {
     return (
         <Link href={link} className='relative h-[50px] lg:h-[100px] inline-block' target='_blank' rel="noopener">
-            <Image 
-            // fill
+            <img 
                 id='image-link' 
-                // sizes="300px"
-                src={image} 
+                src={image.src}
                 alt={alt} 
                 className='rounded-[0.625rem] h-full mx-5' 
                 style={{

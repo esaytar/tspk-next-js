@@ -10,8 +10,8 @@ export default function ContactsBlock() {
             <div className='flex w-full justify-between lg:items-center flex-col lg:flex-row gap-[1.4rem] lg:gap-0'>
                 <div className="flex flex-col gap-5">
                     <div className='flex flex-col gap-4'>
-                        <p className='text-mainBlue lg:text-[1.25rem] text-[1.31rem]'>Главный корпус</p>
-                        <div className="flex flex-col lg:gap-2.5 gap-[0.34rem] text-18">
+                        <p className='text-mainBlue lg:text-18 text-[1.14rem]'>Главный корпус</p>
+                        <div className="flex flex-col lg:gap-2.5 gap-[0.34rem] text-base">
                             <p className='text-grayMainText flex gap-[0.31rem]'>
                                 <Image src={marker} alt="местоположение" width={16} height={16}/>
                                 Самарская область, г. Тольятти, ул. Мурысева, 84
@@ -27,8 +27,8 @@ export default function ContactsBlock() {
                         </div>
                     </div>
                     <div className='flex flex-col gap-4'>
-                        <p className='text-mainBlue lg:text-[1.25rem] text-[1.31rem]'>Второй корпус</p>
-                        <div className="flex flex-col lg:gap-2.5 gap-[0.34rem] text-18">
+                        <p className='text-mainBlue lg:text-18 text-[1.14rem]'>Второй корпус</p>
+                        <div className="flex flex-col lg:gap-2 gap-[0.34rem] text-base">
                             <p className='text-grayMainText flex gap-[0.31rem]'>
                                 <Image src={marker} alt="местоположение" />
                                 Самарская область, г. Тольятти, ул. Ленинградская, 28
@@ -40,7 +40,7 @@ export default function ContactsBlock() {
                         </div>
                     </div>
                 </div>
-                <Map styles='w-full h-[15rem] lg:w-[44rem] lg:h-[25.3rem]'/>
+                <Map styles='w-full h-[15rem] lg:w-[57rem] lg:h-[21rem] rounded-[15px]'/>
             </div>
         </div>
     )

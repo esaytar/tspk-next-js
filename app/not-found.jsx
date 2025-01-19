@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import girl from '@/img/girl-404.png'
 import arrow from '@/img/icons/arrow-bottom.svg'
+import ArrowSmall from '../components/ui/ArrowSmall'
 
 export default function notFound() {
     return (
@@ -15,7 +16,7 @@ export default function notFound() {
                         <p className='font-semibold lg:text-[1.88rem] text-[1.93rem]'>Страница не найдена</p>
                         <p className='lg:text-[1.5rem] text-[1.36rem] leading-7'>Кажется, вы заблудились! Пожалуйста, проверьте правильность введенного адреса или вернитесь на главную страницу. Надеемся, что вы скоро найдете то, что ищете.</p>
                     </div>
-                    <Link href="/" className='text-mainBlue flex gap-2.5 text-[1.5rem] items-center'>На главную <Image src={arrow} className='stroke-mainBlue -rotate-90'/></Link>
+                    <Link href="/" className='text-mainBlue flex gap-2.5 text-[1.5rem] items-center'>На главную <ArrowSmall style='stroke-mainBlue -rotate-90 h-[10px] w-[15px]'/></Link>
                 </div>
             </div>
         </div>

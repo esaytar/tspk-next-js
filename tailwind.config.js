@@ -19,7 +19,7 @@ module.exports = {
       colors: {
         'mainGray': '#141414',
         'mainBlue': '#1763F4',
-        'grayText': 'rgba(20, 20, 20, 0.8)',
+        'grayText': '#141414',
         'grayMainText': '#434343',
       },
       gap: {
@@ -27,6 +27,9 @@ module.exports = {
       },
       boxShadow: {
         'newShad': '4px 4px 10px 0 rgba(69, 129, 246, 0.15)',
+      },
+      transitionProperty: {
+        'cardReverse': 'transform .6s linear'
       }
     },
   },
