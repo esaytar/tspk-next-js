@@ -1,4 +1,4 @@
-import ContactsBlock from "../components/ContactsBlock";
+import ContactsBlock from "../components/Contacts/ContactsBlock";
 import DirectionEdBlock from "../components/DirectionEdBlock";
 import HeadBlock from "../components/HeadBlock/HeadBlock";
 import NewsBlock from "../components/news/NewsBlock";

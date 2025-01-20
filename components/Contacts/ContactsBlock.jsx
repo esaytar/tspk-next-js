@@ -1,6 +1,6 @@
 import phone from '@/img/icons/phone.svg'
 import marker from '@/img/icons/marker.svg'
-import Map from './ui/Map'
+import Map from '../ui/Map'
 import Image from 'next/image'
 
 export default function ContactsBlock() {
