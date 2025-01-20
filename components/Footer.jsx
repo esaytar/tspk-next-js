@@ -35,7 +35,7 @@ export default function Footer() {
                         </div>
                     </nav>
                 </div>
-                <p className='text-white text-center text-[0.85rem] md:text-[1rem]'>&copy; {new Date().getFullYear()} Государственное автономное профессиональное образовательное учреждение Самарской области "Тольяттинский социально-педагогический колледж"</p>
+                <p className='text-white text-center text-[0.85rem] md:text-[1rem]'>&copy; {new Date().getFullYear()} Государственное автономное профессиональное образовательное учреждение Самарской области &quot;Тольяттинский социально-педагогический колледж&quot;</p>
             </div>
         </footer>
     )

@@ -28,7 +28,7 @@ export default function HeadBlock() {
                     </div>
                 </div>
                 <div className='hidden lg:block w-full relative'>
-                    <img src="https://i.mycdn.me/getVideoPreview?id=2754291698396&idx=1&type=39&tkn=YoYKFIhtGVnCN82LSTsOni2ChYs&fn=vid_x&quot;" alt="" />
+                    <Image src="https://i.mycdn.me/getVideoPreview?id=2754291698396&idx=1&type=39&tkn=YoYKFIhtGVnCN82LSTsOni2ChYs&fn=vid_x&quot;" alt="картинка из видео" width={842} height={550}/>
                     <iframe className='absolute left-0 top-0 w-full h-full' src="https://vk.com/video_ext.php?oid=-174700694&id=456239521&hd=1" width="842" height="550" allow="encrypted-media; fullscreen; picture-in-picture;" frameBorder="0" allowFullScreen></iframe>
                 </div>
             </div>

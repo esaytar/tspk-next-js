@@ -91,7 +91,7 @@ export default function NewsBlock() {
             })
         }
         fetchData();
-    }, [])
+    }, [checkRepost, getImgUrl])
 
     const convertToNormalDate = (num) => {
         const date = new Date(num * 1000)

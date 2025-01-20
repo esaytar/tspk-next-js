@@ -20,7 +20,7 @@ export default function NewsModal() {
         }
         document.addEventListener('click', handleClickOutside)
         return () => document.removeEventListener('click', handleClickOutside)
-    }, [isOpened]);
+    }, [isOpened, setIsOpened]);
     if (!isOpened) return null;
 
     return (
@@ -35,7 +35,7 @@ export default function NewsModal() {
             <div className={`grid lg:grid-cols-2 gap-2.5`}>
                 {imageNews.map((img, index) => (
                     <div className='w-full aspect-square' key={index}>
-                        <img src={img} className='rounded-[1rem] w-full aspect-square object-cover'/>
+                        <img src={img} alt='картинка новости' className='rounded-[1rem] w-full aspect-square object-cover'/>
                     </div>
                 ))}
             </div>
