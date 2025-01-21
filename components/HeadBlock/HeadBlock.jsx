@@ -18,11 +18,12 @@ export default function HeadBlock() {
                         <p className='uppercase text-[2.14rem] leading-[120%] lg:text-[3rem] lg:leading-[3.52rem]'>Тольяттинский социально-педагогический колледж</p>
                     </div>
                     <div className='flex flex-col gap-5 lg-gap-[1.88rem] items-start leading-[1.32rem]'>
-                        <button className="px-[1.86rem] py-4 lg:px-9 lg:py-[1.125rem] rounded-[1rem] gap-5 text-[1.14rem] bg-mainBlue flex items-center justify-center hover:bg-[#0949C2] duration-[.1s]">
+                        <button className="px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-5 text-[1.14rem] bg-mainBlue flex items-center justify-center hover:bg-[#0949C2] duration-[.1s]">
                             <a href="http://x927215g.beget.tech/index.html" target="_blank" rel="noopener">Инвестируй в своё будущее</a>
                             <Image src={arrowLong} className={styles.image} alt="стрелка вправо" />
                         </button>
-                        <a href='#directions' className='border-white border-[1px] px-[1.86rem] py-4 lg:px-9 lg:py-[1.125rem] rounded-[1rem] gap-3 flex text-[1.14rem]'>
+                        <a href='#directions'
+                        className='border-white border-[1px] px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-3 flex text-[1.14rem]'>
                             Направления
                             <Image src={arrowLong} className={`rotate-90 ${styles.image}`} alt="стрелка вниз" />
                         </a>

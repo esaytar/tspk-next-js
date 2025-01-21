@@ -32,7 +32,7 @@ export default function Header() {
         if (pathname === '/') {
             function handleScroll() {
                 const scrollY = window.scrollY
-                const heightPic = document.querySelector('.pic').offsetHeight
+                const heightPic = document.querySelector('.pic') ? document.querySelector('.pic').offsetHeight : null
                 const headerHeight = document.querySelector('header').offsetHeight
                 
                 if (isMobile) {

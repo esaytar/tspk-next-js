@@ -34,12 +34,12 @@ export default function Contacts() {
 
     return (
         <>
-            <div className="flex flex-col gap-[1.43rem] px-[2.14rem] w-full mt-[10.3rem]
-            lg:max-w-[80rem] xl:p-0 md:gap-10 2xl:max-w-[73%] 2xl:min-w-[84.5rem]">
-                <h1 className="text-[1.81rem] font-semibold leading-[33.98px]">Контакты</h1>
+            <div className="flex flex-col gap-[1.43rem] px-[2.14rem] w-full mt-[6.75rem]
+            lg:max-w-[80rem] xl:p-0 md:gap-10 2xl:max-w-[73%] 2xl:min-w-[84.5rem] lg:mt-[10.3rem]">
+                <h1 className="text-[1.29rem] lg:text-[1.81rem] font-semibold leading-[33.98px]">Контакты</h1>
                 <div className="flex gap-10 items-center flex-col lg:flex-row">
                     <form action="" 
-                        className="flex flex-col w-full gap-2.5 bg-white shadow-newShad p-5 rounded-[1.25rem] lg:w-1/2 order-2 
+                        className="flex flex-col w-full gap-2.5 bg-white shadow-newShad p-[1.43rem] rounded-[1.25rem] lg:w-1/2 order-2 
                         lg:order-1 lg:p-10">
                         {contactsFormInfo.map((item, index) => (
                             <FormPart
@@ -51,11 +51,11 @@ export default function Contacts() {
                             />
                         ))}
                         <input type="submit" value="Отправить"
-                        className="bg-mainBlue w-full text-white px-5 py-[1.125rem] rounded-[10px] mt-2.5" />
+                        className="bg-mainBlue w-full text-white text-18 px-5 py-[1.125rem] rounded-[10px] mt-2.5" />
                     </form>
                     <div className="flex flex-col gap-5 w-full lg:w-1/2 lg:order-2">
                         {corpNames.map((i, index) => <ContactsCorpus key={index} nameCorpus={i} id={index}/>)}
-                        <p className="text-grayMainText leading-[18.75px]">Для соединения с остальными службами необходимо позвонить на Вахту и сообщить службу для соединения (например: соедините меня с кабинетом 104).
+                        <p className="text-grayMainText leading-[16.41px] lg:leading-[18.75px]">Для соединения с остальными службами необходимо позвонить на Вахту и сообщить службу для соединения (например: соедините меня с кабинетом 104).
                         <br />Заочное отделение находится во 2 корпусе, Ленинградская 28 (позвонить на вахту и попросить соединить с методистом заочного отделения)</p>
                     </div>
                 </div>
