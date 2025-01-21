@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function LinkedImage({link, image, alt}) {
@@ -9,10 +8,7 @@ export default function LinkedImage({link, image, alt}) {
                 src={image.src}
                 alt={alt} 
                 className='rounded-[0.625rem] h-full mx-5' 
-                style={{
-                    boxShadow: '4px 4px 10px 0 rgba(69, 129, 246, 0.15)',
-                    // objectFit: 'contain',
-                }} 
+                style={{boxShadow: '4px 4px 10px 0 rgba(69, 129, 246, 0.15)',}} 
             />
         </Link>
     ) 

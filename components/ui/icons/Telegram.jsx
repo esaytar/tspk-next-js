@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Telegram({styles}) {
     return (
         <a href="https://t.me/tspktlt" target='_blank' rel="noopener">

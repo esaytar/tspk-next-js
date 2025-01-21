@@ -1,9 +1,40 @@
 import phone from '@/img/icons/phone.svg'
 import marker from '@/img/icons/marker.svg'
-import Map from '../ui/Map'
+const Map = dynamic(() => import('../ui/Map'), {ssr: false})
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 
 export default function ContactsBlock() {
+    const contactInfos1 = [
+        {
+            text: 'Самарская область, г. Тольятти, ул. Мурысева, 84',
+            image: marker,
+            link: '',
+        },
+        {
+            text: '24-10-25 (вахта)',
+            image: phone,
+            link: 'tel:+78482241025',
+        },
+        {
+            text: '24-10-54 (приемная)',
+            image: phone,
+            link: 'tel:+78482241054',
+        },
+    ]
+    const contactInfos2 = [
+        {
+            text: 'Самарская область, г. Тольятти, ул. Ленинградская, 28',
+            image: marker,
+            link: '',
+        },
+        {
+            text: '28-36-44',
+            image: phone,
+            link: 'tel:+78482283644',
+        },
+    ]
+
     return (
         <div className='flex flex-col gap-4 lg:gap-0'>
             <p className='lg:text-[1.82rem] text-[1.29rem] text-grayText font-semibold'>Контакты</p>
@@ -11,33 +42,33 @@ export default function ContactsBlock() {
                 <div className="flex flex-col gap-5">
                     <div className='flex flex-col gap-4'>
                         <p className='text-mainBlue lg:text-18 text-[1.14rem]'>Главный корпус</p>
-                        <div className="flex flex-col lg:gap-2.5 gap-[0.34rem] text-base">
-                            <p className='text-grayMainText flex gap-[0.31rem]'>
-                                <Image src={marker} alt="местоположение" width={16} height={16}/>
-                                Самарская область, г. Тольятти, ул. Мурысева, 84
-                            </p>
-                            <p className='text-grayMainText flex gap-[0.31rem]'>
-                                <Image src={phone} alt="номер телефона" />
-                                <a href="tel:241025">24-10-25</a> (вахта)
-                            </p>
-                            <p className='text-grayMainText flex gap-[0.31rem]'>
-                                <Image src={phone} alt="номер телефона" />
-                                <a href="tel:241054">24-10-54</a> (приемная)
-                            </p>
-                        </div>
+                        <ul className="flex flex-col lg:gap-2.5 gap-[0.34rem] text-base">
+                            {contactInfos1.map((item, index) => (
+                                <li key={index} className='text-grayMainText flex gap-[0.31rem]'>
+                                    <Image src={item.image} alt="иконка контактов" width={16} height={16}/>
+                                    {item.link === '' ? (
+                                        <p>{item.text}</p>
+                                    ) : ( 
+                                        <a href={item.link}>{item.text}</a>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                     <div className='flex flex-col gap-4'>
                         <p className='text-mainBlue lg:text-18 text-[1.14rem]'>Второй корпус</p>
-                        <div className="flex flex-col lg:gap-2 gap-[0.34rem] text-base">
-                            <p className='text-grayMainText flex gap-[0.31rem]'>
-                                <Image src={marker} alt="местоположение" />
-                                Самарская область, г. Тольятти, ул. Ленинградская, 28
-                            </p>
-                            <p className='text-grayMainText flex gap-[0.31rem]'>
-                                <Image src={phone} alt="номер телефона" />
-                                <a href="tel:283644">28-36-44</a>
-                            </p>
-                        </div>
+                        <ul className="flex flex-col lg:gap-2 gap-[0.34rem] text-base">
+                            {contactInfos2.map((item, index) => (
+                                <li key={index} className='text-grayMainText flex gap-[0.31rem]'>
+                                    <Image src={item.image} alt="иконка контактов" width={16} height={16}/>
+                                    {item.link === '' ? (
+                                        <p>{item.text}</p>
+                                    ) : ( 
+                                        <a href={item.link}>{item.text}</a>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
                 <Map styles='w-full h-[15rem] lg:w-[57rem] lg:h-[21rem] rounded-[15px]'/>

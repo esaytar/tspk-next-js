@@ -1,12 +1,12 @@
 'use client'
-
 import {useEffect, useRef, useState} from 'react'
 import NewsCard from './NewsCard'
 import { register } from 'swiper/element/bundle'
-import alternative from '@/img/alternative.jpg'
+const alternative = dynamic(() => import('@/img/alternative.jpg'))
 import axios from 'axios'
 import ArrowSmall from '../ui/ArrowSmall'
-import NewsModal from './NewsModal'
+const NewsModal = dynamic(() => import('./NewsModal'))
+import dynamic from 'next/dynamic'
 
 register();
 
@@ -91,7 +91,7 @@ export default function NewsBlock() {
             })
         }
         fetchData();
-    }, [checkRepost, getImgUrl])
+    }, [])
 
     const convertToNormalDate = (num) => {
         const date = new Date(num * 1000)

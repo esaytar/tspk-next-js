@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import DataCollegeMenu from './DataCollegeMenu'
 import CollegeMenu from './CollegeMenu'
 import BPOOMenu from './BPOOMenu'

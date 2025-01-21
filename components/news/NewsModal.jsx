@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import useHandleNews from '../../store/useHandleNews'
 import closeIcon from '@/img/icons/close-icon.svg'
 

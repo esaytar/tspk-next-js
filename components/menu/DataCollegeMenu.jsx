@@ -71,15 +71,13 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
 
     return (
         <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col ${main}`}>
-            {
-                items.map((item, index) => (
-                    <li className={`${item.classes && liW ? liW : ''} w-fit`} key={index}>
-                        <Link href={item.link} className={`${color === undefined ? 'text-white/60 hover:text-white' : color}`}>
-                            {item.value}
-                        </Link>
-                    </li>
-                ))
-            }
+            {items.map((item, index) => (
+                <li className={`${item.classes && liW ? liW : ''} w-fit`} key={index}>
+                    <Link href={item.link} className={`${color === undefined ? 'text-white/60 hover:text-white' : color}`}>
+                        {item.value}
+                    </Link>
+                </li>
+            ))}
         </ul>
     )
 }

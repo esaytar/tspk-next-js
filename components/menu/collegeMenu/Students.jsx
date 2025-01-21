@@ -1,4 +1,3 @@
-import React from 'react'
 import ListComponent from './ListComponent'
 
 export default function Students({styles, color}) {

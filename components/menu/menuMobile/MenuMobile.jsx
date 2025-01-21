@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './MenuMobile.css'
 import Telegram from '../../ui/icons/Telegram'
 import Vk from '../../ui/icons/Vk'
 import eye from '@/img/icons/eye.svg'
-import DataCollegeMenu from '../DataCollegeMenu'
-import CollegeMenu from '../CollegeMenu'
-import BPOOMenu from '../BPOOMenu'
+const DataCollegeMenu = dynamic(() => import('../DataCollegeMenu'))
+const CollegeMenu = dynamic(() => import('../CollegeMenu'))
+const BPOOMenu = dynamic(() => import('../BPOOMenu'))
 import AccordionMenu from '../AccordionMenu'
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 
 export default function MenuMobile({status, style}) {
     const [activeIndex, setActiveIndex] = useState(-1);
@@ -43,7 +44,10 @@ export default function MenuMobile({status, style}) {
             </nav>
             <div className='flex w-full justify-between mt-6'>
                 <button>
-                    <Image src={eye} alt="" />
+                    <Image src={eye} 
+                        alt="версия для слабовидящих" 
+                        width={40} height={40} 
+                        style={{height: 'auto', width: 'auto'}} />
                 </button>
                 <div className='mob-social flex gap-[1.43rem] items-center'>
                     <Vk/>

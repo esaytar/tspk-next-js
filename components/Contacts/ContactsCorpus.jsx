@@ -1,4 +1,3 @@
-import React from 'react'
 import ContactStroke from './ContactStroke'
 import phone from '@/img/icons/phone-border.svg'
 import mail from '@/img/icons/email-border.svg'

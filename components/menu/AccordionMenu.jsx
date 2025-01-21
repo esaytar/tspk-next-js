@@ -1,4 +1,3 @@
-import React from 'react'
 import ArrowSmall from '../ui/ArrowSmall'
 
 export default function AccordionMenu({child, name, activeIndex, onAccordionClick, index}) { 

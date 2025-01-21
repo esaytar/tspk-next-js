@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function FormPart({labelName, placeholderName, nameFor, inputType}) {
     return (
         <div className="flex flex-col gap-1">

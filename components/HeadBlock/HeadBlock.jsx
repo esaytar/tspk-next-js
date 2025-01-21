@@ -1,8 +1,9 @@
 import styles from './HeadBlock.module.css'
 import arrowLong from '@/img/icons/arrow-long.svg'
 import Image from "next/image";
-// import videoBg from '../../../assets/video_bg.jpg'
-// import video from '../../../assets/video.mp4'
+// import dynamic from 'next/dynamic';
+// const videoBg = dynamic(() => import('../../../assets/video_bg.jpg'))
+// const video = dynamic(() => import('../../../assets/video.mp4'))
 
 export default function HeadBlock() {
     return (

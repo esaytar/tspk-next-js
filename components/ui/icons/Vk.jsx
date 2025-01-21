@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Vk({styles}) {
     return (
         <a href="https://vk.com/tspk63" target='_blank' rel="noopener">

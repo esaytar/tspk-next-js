@@ -1,5 +1,6 @@
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import Link from 'next/link'
+const Link = dynamic(() => import('next/link'))
 
 export default function DemExamCard({img, name, txtLinks}) {
     return (

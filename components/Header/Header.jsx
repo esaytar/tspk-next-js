@@ -2,14 +2,15 @@
 import { usePathname } from "next/navigation"
 import {useRef, useState, useEffect} from 'react'
 import useDropdown from '../../store/useDropdown'
+import dynamic from "next/dynamic"
 import Link from "next/link"
 import eye from '@/img/icons/eye.svg'
 import Image from "next/image";
 import styles from './Header.module.css'
 import LogoTSPK from "../ui/icons/LogoTSPK"
 import ArrowSmall from '.././ui/ArrowSmall'
-import DropDownMenu from "../menu/DropDownMenu"
-import MenuMobile from "../menu/menuMobile/MenuMobile"
+const DropDownMenu = dynamic(() => import('../menu/DropDownMenu'))
+const MenuMobile = dynamic(() => import('../menu/menuMobile/MenuMobile'))
 
 export default function Header() {
     const dropdown = useDropdown()
@@ -97,14 +98,12 @@ export default function Header() {
                 lg:max-w-[80rem] lg:rounded-[1rem] lg:px-10 lg:py-5 2xl:max-w-[73%] 2xl:min-w-[84.5rem]`}>
                 <LogoTSPK/>
                 <ul className='text-white gap-5 lg:gap-10 items-center hidden lg:flex '>
-                    {
-                        linkArray.map((link, index) => (
-                            <li key={index} className='flex gap-[0.32rem] items-center cursor-pointer' onClick={openDropDownMenu}>
-                                {link}
-                                <ArrowSmall style={`${styles.arrowBottom} ${dropdown.isOpen && resultMenu === link ? 'rotate-180' : ''}`}/>
-                            </li>
-                        ))
-                    }
+                    {linkArray.map((link, index) => (
+                        <li key={index} className='flex gap-[0.32rem] items-center cursor-pointer' onClick={openDropDownMenu}>
+                            {link}
+                            <ArrowSmall style={`${styles.arrowBottom} ${dropdown.isOpen && resultMenu === link ? 'rotate-180' : ''}`}/>
+                        </li>
+                    ))}
                     <li><Link href='/dem-exam'>Демонcтрационный экзамен</Link></li>
                     <li><Link href='/contacts'>Контакты</Link></li>
                 </ul>
@@ -113,7 +112,10 @@ export default function Header() {
                 </button>
                 <MenuMobile status={dropdown.isMobileOpen ? 'active' : ''} style={styles.menuMobile}/>
                 <button className='rounded-[0.32rem] lg:flex hidden bg-mainBlue items-center justify-center hover:bg-[#0949C2] duration-[.1s]'>
-                    <Image src={eye} alt="версия для слабовидящих" width={40} height={40}/>
+                    <Image src={eye} 
+                    alt="версия для слабовидящих" 
+                    width={40} height={40} 
+                    style={{height: 'auto', width: 'auto'}} />
                 </button>
             </header>
             <DropDownMenu 
@@ -121,8 +123,7 @@ export default function Header() {
                 main='gap-5'
                 content={resultMenu}
                 linkValue={linkArray}
-                >
-            </DropDownMenu>
+            />
         </div>
     )
 }
