@@ -58,7 +58,7 @@ export default function NewsBlock() {
 
     useEffect(() => {
         async function fetchData() {
-            await axios.get('https://esaytar.github.io/tspk/data.json')
+            await axios.get('https://api.vk.com/method/wall.get?owner_id=174700694&domain=tspk63&offset=1&count=100&access_token=664330a8664330a8664330a8fa6638f9f566643664330a8047988401142e3fe7c189a9a&filter=owner&v=5.236')
             .then(res => {
                 const newsItems = res.data.response.items.map((item, index) => {
                     let cutNumber = 4

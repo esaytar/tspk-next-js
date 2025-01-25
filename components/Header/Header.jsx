@@ -113,7 +113,9 @@ export default function Header() {
                 <MenuMobile status={dropdown.isMobileOpen ? 'active' : ''} style={styles.menuMobile}/>
                 <button className='rounded-[0.32rem] lg:flex hidden bg-mainBlue items-center justify-center hover:bg-[#0949C2] duration-[.1s]'>
                     <Image src={eye} 
+                    id="specialButton"
                     alt="версия для слабовидящих" 
+                    title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" 
                     width={40} height={40} 
                     style={{height: 'auto', width: 'auto'}} />
                 </button>

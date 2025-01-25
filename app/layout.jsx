@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import Footer from '../components/Footer'
 import MarqueeBlock from "../components/marquee/MarqueeBlock";
 import CheckRedirectFunc from "../components/CheckRedirectFunc";
+import Script from "next/script";
 
 const roboto = Roboto({ subsets: ["latin"], weight: '400' });
 
@@ -18,6 +19,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/images/logo-blue.png"/>
+        <Script src="https://lidrekon.ru/slep/js/jquery.js" strategy="afterInteractive" />
+        <Script src="https://lidrekon.ru/slep/js/uhpv-full.min.js" strategy="afterInteractive" />
       </head>
       <body className={roboto.className}>
         <CheckRedirectFunc/>
