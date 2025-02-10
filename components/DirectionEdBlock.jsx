@@ -30,7 +30,7 @@ export default function DirectionEdBlock() {
 
     return (
         <div className="flex flex-col gap-10" id='directions'>
-            <p className='text-grayText text-[1.29rem] lg:text-[1.81rem] font-semibold '>Направления подготовки</p>
+            <p className='text-grayText text-[1.29rem] lg:text-[1.81rem] font-medium '>Направления подготовки</p>
             <div className="flex gap-2 flex-col lg:flex-row">
                 {dirsArray.map((item, index) => (
                     <DirectionEdCard

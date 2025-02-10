@@ -4,8 +4,8 @@ export default function Teachers({styles, main, color}) {
     const list = [
         {
             value: 'Преподавателям',
-            isLink: false,
-            link: ''
+            isLink: true,
+            link: '/teachers/'
         },
         {
             value: 'Шаблоны документов',

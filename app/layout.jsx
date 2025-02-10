@@ -6,7 +6,7 @@ import MarqueeBlock from "../components/marquee/MarqueeBlock";
 import CheckRedirectFunc from "../components/CheckRedirectFunc";
 import Script from "next/script";
 
-const roboto = Roboto({ subsets: ["latin"], weight: '400' });
+const roboto = Roboto({ subsets: ["latin"], weight: ['400', '500'] });
 
 export const metadata = {
   title: "Тольяттинский социально-педагогический колледж",
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en">
+    <html lang="en" className="!block">
       <head>
         <link rel="icon" href="/images/logo-blue.png"/>
         <Script src="https://lidrekon.ru/slep/js/jquery.js" strategy="afterInteractive" />

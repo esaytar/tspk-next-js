@@ -58,7 +58,7 @@ export default function NewsBlock() {
 
     useEffect(() => {
         async function fetchData() {
-            await axios.get('https://api.vk.com/method/wall.get?owner_id=174700694&domain=tspk63&offset=1&count=100&access_token=664330a8664330a8664330a8fa6638f9f566643664330a8047988401142e3fe7c189a9a&filter=owner&v=5.236')
+            await axios.get('https://esaytar.github.io/tspk/data.json')
             .then(res => {
                 const newsItems = res.data.response.items.map((item, index) => {
                     let cutNumber = 4
@@ -134,7 +134,7 @@ export default function NewsBlock() {
         <div className='flex flex-col lg:gap-10 gap-[1.43rem] w-full relative'> 
             <NewsModal/>
             <div className='flex justify-between w-full items-center'>
-                <p className='text-grayText text-[1.29rem] lg:text-[1.81rem] font-semibold'>Новости</p>
+                <p className='text-grayText text-[1.29rem] lg:text-[1.81rem] font-medium'>Новости</p>
                 <div className='flex gap-2'>
                     <button className='disabled:opacity-50 custom-prev size-[2.19rem] p-3 text-center border-2 border-mainBlue flex justify-center items-center'><ArrowSmall style='stroke-mainBlue min-w-max stroke-2 rotate-90'/></button>
                     <button className='disabled:opacity-50 custom-next size-[2.19rem] p-3 text-center border-2 border-mainBlue flex justify-center items-center'><ArrowSmall style='stroke-mainBlue min-w-max stroke-2 -rotate-90'/></button>

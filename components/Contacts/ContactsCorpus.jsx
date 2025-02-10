@@ -59,7 +59,7 @@ export default function ContactsCorpus({nameCorpus, id}) {
 
     return (
         <>
-            <p className="lg:text-18 text-[1.14rem] font-semibold">{nameCorpus}</p>
+            <p className="lg:text-18 text-[1.14rem] font-medium">{nameCorpus}</p>
             <ul className="flex flex-col gap-[0.71rem] lg:gap-2.5">
                 {array.map((item, index, array) => (
                     <ContactStroke 

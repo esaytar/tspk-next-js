@@ -37,7 +37,7 @@ export default function ContactsBlock() {
 
     return (
         <div className='flex flex-col gap-4 lg:gap-0'>
-            <p className='lg:text-[1.82rem] text-[1.29rem] text-grayText font-semibold'>Контакты</p>
+            <p className='lg:text-[1.82rem] text-[1.29rem] text-grayText font-medium'>Контакты</p>
             <div className='flex w-full justify-between lg:items-center flex-col lg:flex-row gap-[1.4rem] lg:gap-0'>
                 <div className="flex flex-col gap-5">
                     <div className='flex flex-col gap-4'>

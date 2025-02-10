@@ -95,7 +95,7 @@ export default function Header() {
             <header style={transparent && isMobile && pathname === '/' ? {backgroundColor: "transparent"} : {}} 
                 className={`${styles.header} ${isScrolled || pathname !== '/' ? styles.light : styles.dark} ${dropdown.isMobileOpen ? styles.opened : ''}
                 px-[1.88rem] py-[1.25rem] duration-[.2s] w-full flex justify-between items-center fixed z-[21] 
-                lg:max-w-[80rem] lg:rounded-[1rem] lg:px-10 lg:py-5 2xl:max-w-[73%] 2xl:min-w-[84.5rem]`}>
+                lg:max-w-[80rem] 2xl:max-w-[73%] 2xl:min-w-[84.5rem] lg:rounded-[1rem] lg:px-10 lg:py-5`}>
                 <LogoTSPK/>
                 <ul className='text-white gap-5 lg:gap-10 items-center hidden lg:flex '>
                     {linkArray.map((link, index) => (
