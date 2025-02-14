@@ -1,7 +1,7 @@
 import FormPart from "../../components/FormPart";
 import ContactsCorpus from "../../components/Contacts/ContactsCorpus";
 import dynamic from "next/dynamic";
-const Map = dynamic(() => import('../../components/ui/Map'), {ssr: false})
+const Map = dynamic(() => import('../../components/ui/Map'))
 
 export default function Contacts() {
     const contactsFormInfo = [
