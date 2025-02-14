@@ -1,6 +1,6 @@
 import phone from '@/img/icons/phone.svg'
 import marker from '@/img/icons/marker.svg'
-const Map = dynamic(() => import('../ui/Map'), {ssr: false})
+const Map = dynamic(() => import('../ui/Map'))
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
