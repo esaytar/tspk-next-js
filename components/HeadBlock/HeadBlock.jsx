@@ -2,17 +2,14 @@ import styles from './HeadBlock.module.css'
 import arrowLong from '@/img/icons/arrow-long.svg'
 import Image from "next/image";
 import { Raleway } from 'next/font/google';
-// import dynamic from 'next/dynamic';
-// const videoBg = dynamic(() => import('../../../assets/video_bg.jpg'))
-// const video = dynamic(() => import('../../../assets/video.mp4'))
 const raleway = Raleway({ subsets: ["latin"], weight: ['400', '700'] });
 
 export default function HeadBlock() {
     return (
-        <div className={`${styles.picture} pic w-full flex flex-col items-center lg:pt-10 lg:pb-[16rem] relative`}>
-            {/* <video loop autoPlay muted poster={videoBg} className='absolute top-0 left-0 -z-10 w-full h-full object-cover brightness-50'>
-                <source src={video} type='video/mp4'/>
-            </video> */}
+        <div className={` pic w-full flex flex-col items-center lg:pt-10 lg:pb-[16rem] relative`}>
+            <video loop autoPlay muted poster='/video/video-bg.png' className='absolute top-0 left-0 -z-10 w-full h-full object-cover brightness-50'>
+                <source src='/video/video-main_page.mp4' type='video/mp4'/>
+            </video>
             <div className='text-white flex gap-[3.625rem] items-center w-full py-[9.7rem] px-[1.88rem]
             lg:max-w-[80rem] 2xl:max-w-[73%] 2xl:min-w-[84.5rem] lg:pt-[15rem] lg:px-0'>
                 <div className='w-full flex flex-col gap-10 lg:max-w-[29rem]'>
@@ -32,10 +29,10 @@ export default function HeadBlock() {
                         </a>
                     </div>
                 </div>
-                <div className='hidden lg:block w-full relative'>
+                {/* <div className='hidden lg:block w-full relative'>
                     <Image src="https://i.mycdn.me/getVideoPreview?id=2754291698396&idx=1&type=39&tkn=YoYKFIhtGVnCN82LSTsOni2ChYs&fn=vid_x&quot;" alt="картинка из видео" width={842} height={550}/>
                     <iframe className='absolute left-0 top-0 w-full h-full' src="https://vk.com/video_ext.php?oid=-174700694&id=456239521&hd=1" width="842" height="550" allow="encrypted-media; fullscreen; picture-in-picture;" frameBorder="0" allowFullScreen></iframe>
-                </div>
+                </div> */}
             </div>
         </div>
     )
