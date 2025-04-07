@@ -4,28 +4,28 @@ export default function Students({styles, color}) {
     const list = [
         {
             value: 'Студентам',
-            isLink: false,
-            link: ''
+            isLink: true,
+            link: '/students/'
         },
         {
             value: 'Расписание на каждый день',
             isLink: true,
-            link: '/error'
+            link: '/schedule'
         },
         {
             value: 'Содействие трудоустройству выпускников',
             isLink: true,
-            link: '/error'
+            link: '/students/rabota'
         },
         {
             value: 'Информация о вакантных местах для перевода',
             isLink: true,
-            link: '/error'
+            link: '/sveden/'
         },
         {
             value: 'ЕГЭ 2024',
             isLink: true,
-            link: '/error'
+            link: '/ege'
         },
     ]
     

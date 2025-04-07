@@ -5,67 +5,67 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Основные сведения',
-            link: '/infos/basic-data'
+            link: '/sveden/basic-data'
         },
         {
             classes: true,
             value: 'Структура и органы управления образовательной организацией',
-            link: '/infos/structure-college'
+            link: '/sveden/structure-college'
         },
         {
             classes: false,
             value: 'Документы',
-            link: '/infos/documents'
+            link: '/sveden/documents'
         },
         {
             classes: false,
             value: 'Образование',
-            link: '/error'
+            link: '/sveden/'
         },
         {
             classes: false,
             value: 'Образовательные стандарты и требования',
-            link: '/infos/standarts'
+            link: '/sveden/standarts'
         },
         {
             classes: true,
             value: 'Руководство. Педагогический (научно-педагогический) состав',
-            link: '/error'
+            link: '/sveden/'
         },
         {
             classes: true,
             value: 'Материально-техническое обеспечение и оснащенность образовательного процесса',
-            link: '/error'
+            link: '/sveden/'
         },
         {
             classes: true,
             value: 'Стипендии и иные виды материальной поддержки',
-            link: '/error'
+            link: '/sveden/'
         },
         {
             classes: false,
             value: 'Платные образовательные услуги',
-            link: '/infos/paid-edu-services'
+            link: '/sveden/paid-edu-services'
         },
         {
             classes: false,
             value: 'Финансово-хозяйственная деятельность',
-            link: '/error'
+            link: '/sveden/'
         },
         {
             classes: true,
             value: 'Вакантные места для приема (перевода) обучающихся',
-            link: '/error'
+            link: '/sveden/'
         },
         {
             classes: false,
             value: 'Доступная среда',
-            link: '/error'
+            link: '/sveden/'
         },
         {
             classes: false,
             value: 'Международное сотрудничество',
-            link: '/infos/international-cooperation'
+            link: '/sveden/international-cooperation'
         },
     ]
 

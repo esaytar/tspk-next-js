@@ -4,38 +4,38 @@ export default function Applicants({styles, color}) {
     const list =  [
         {
             value: 'Абитуриентам',
-            isLink: false,
-            link: ''
+            isLink: true,
+            link: '/applicants/'
         },
         {
             value: 'Приемная комиссия',
             isLink: true,
-            link: '/error'
+            link: '/applicants/priemnaya-komissiya'
         },
         {
             value: 'Специальности',
             isLink: true,
-            link: '/error'
+            link: '/applicants/spisok'
         },
         {
             value: 'Общежитие',
             isLink: true,
-            link: '/error'
+            link: '/applicants/obshchaga'
         },
         {
             value: 'Пофамильный список подавших заявления',
             isLink: true,
-            link: '/error'
+            link: '/applicants/spisok'
         },
         {
             value: 'Профориентация школьников',
             isLink: true,
-            link: '/error'
+            link: '/applicants/prof'
         },
         {
             value: 'Статистика поданных заявлений 2023',
             isLink: true,
-            link: '/error'
+            link: '/applicants/statistika'
         },
     ]
 
