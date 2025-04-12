@@ -1,10 +1,11 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "../components/Header/Header";
 import Footer from '../components/Footer'
 import MarqueeBlock from "../components/marquee/MarqueeBlock";
 import CheckRedirectFunc from "../components/CheckRedirectFunc";
 import Script from "next/script";
+import Sidebar from "../components/Sidebar/Sidebar";
+import Header from "../components/Header/Header";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ['400', '500'] });
 
@@ -24,11 +25,19 @@ export default function RootLayout({ children }) {
       </head>
       <body className={roboto.className}>
         <CheckRedirectFunc/>
-        <div className="w-full flex flex-col items-center gap-[1.43rem] overflow-hidden md:gap-[3.75rem]">
+        <div className="w-full flex flex-col lg:flex-row items-center overflow-hidden">
           <Header/>
-          {children}
-          <MarqueeBlock/>
-          <Footer/>
+          <div className="hidden lg:block">
+            <Sidebar/>
+          </div>
+          <div className="min-w-[27%] min-h-screen hidden lg:block"></div>
+          <div className="flex flex-col w-full gap-[1.42rem] lg:gap-14 lg:max-w-[73%]">
+            <div className="px-5 lg:px-10 flex flex-col gap-10">
+              {children}
+            </div>
+            <MarqueeBlock/>
+            <Footer/>
+          </div>
         </div>
       </body>
     </html>

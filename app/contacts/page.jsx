@@ -34,12 +34,12 @@ export default function Contacts() {
 
     return (
         <>
-            <div className="flex flex-col gap-[1.43rem] px-[2.14rem] w-full mt-[6.75rem]
-            lg:max-w-[80rem] xl:p-0 md:gap-10 2xl:max-w-[73%] 2xl:min-w-[84.5rem] lg:mt-[10.3rem]">
+            <div className="flex flex-col gap-[1.43rem] w-full mt-[6.75rem]
+            md:gap-10 lg:mt-10 lg:p-0">
                 <h1 className="text-[1.29rem] lg:text-[1.81rem] font-medium leading-[33.98px]">Контакты</h1>
                 <div className="flex gap-10 items-center flex-col lg:flex-row">
                     <form action="" 
-                        className="flex flex-col w-full gap-2.5 bg-white shadow-newShad p-[1.43rem] rounded-[1.25rem] lg:w-1/2 order-2 
+                        className="flex flex-col w-full gap-2.5 bg-white shadow-newShad p-[1.43rem] rounded-[1.25rem] lg:w-[58%] order-2 
                         lg:order-1 lg:p-10">
                         {contactsFormInfo.map((item, index) => (
                             <FormPart
@@ -60,7 +60,7 @@ export default function Contacts() {
                     </div>
                 </div>
             </div>
-            <Map styles='w-full lg:min-h-[500px]'/>
+            <Map styles='w-full lg:min-h-[500px] rounded-[1.25rem]'/>
         </>
     )
 }

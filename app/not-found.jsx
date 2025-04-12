@@ -5,8 +5,8 @@ import ArrowSmall from '../components/ui/ArrowSmall'
 
 export default function notFound() {
     return (
-        <div className='flex flex-col gap-[1.43rem] px-[2.14rem] w-full mt-[6.5rem] 
-            lg:max-w-[80rem] xl:p-0 md:gap-[3.75rem] 2xl:max-w-[73%] 2xl:min-w-[84.5rem] lg:mt-[10rem]'>
+        <div className="flex flex-col gap-[1.43rem] w-full mt-[6.75rem]
+            xl:p-0 md:gap-10 lg:mt-10">
             <div className='w-full flex justify-between flex-col lg:flex-row'>
                 <Image src={girl} alt='Страница недоступна' style={{width: 'auto', height: 'auto'}}/>
                 <div className='flex flex-col lg:gap-10 gap-[1.42rem] lg:p-10 py-[1.42rem]'>

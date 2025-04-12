@@ -1,18 +1,7 @@
-@media (max-width: 1024px) {
-    .drop {display: none !important;}
-}
-
-.dark {background: #141414; color: #fff;}
-.light {background: #fff; box-shadow: 4px 4px 10px 0 rgba(69, 129, 246, 0.15);}
-
-.dark .arrowBottom {stroke: #fff;}
-.light .arrowBottom {stroke: #141414;}
-
-.light a, 
-.light li {color: #141414;}
+.dark {background: #fff; box-shadow: 4px 4px 10px 0 rgba(69, 129, 246, 0.15);}
 
 .opened::before {
-    background: #141414 !important; 
+    background: #152441 !important; 
     content: ''; 
     position: absolute; 
     width: 100%; 
@@ -37,14 +26,14 @@
     .light li > a {color: #141414 !important; }
 }
 
-.dark a > svg {fill: #fff; width: 3.2rem;}
-.light a > svg {fill: rgba(20, 20, 20, 0.8); width: 3.2rem;}
+.dark a > svg {fill: #141414; width: 3.2rem;}
+.light a > svg {fill: #fff; width: 3.2rem;}
 
 .header .btnBurger,
 .header .btnBurger .line {transition: all .3s; position: relative;}
 
-.header .btnBurger::before {content: ''; transition: all .3s; position: absolute; top: -7px; left: 0; width: 100%; background: #fff; height: .1rem;}
-.header .btnBurger::after {content: ''; transition: all .3s; position: absolute; bottom: -7px; right: 0; width: 100%; background: #fff; height: .1rem;}
+.header .btnBurger::before {content: ''; transition: all .3s; position: absolute; top: -7px; left: 0; width: 100%; background: #141414; height: .1rem;}
+.header .btnBurger::after {content: ''; transition: all .3s; position: absolute; bottom: -7px; right: 0; width: 100%; background: #141414; height: .1rem;}
 
 .opened .btnBurger .line {opacity: 0;}
 .opened .btnBurger::before {top: 0; transform: rotate(45deg); transform-origin: center; background: #fff;}
@@ -55,17 +44,17 @@
     width: 1.5rem;
     height: .1rem;
     border-radius: 50px;
+    background: #141414;
 }
-
-.dark .line { background: #fff; }
 
 .light .line,
 .light .btnBurger::after,
-.light .btnBurger::before {background: #141414;}
+.light .btnBurger::before {background: #fff;}
 
 .opened .line,
 .opened .btnBurger::after,
 .opened .btnBurger::before {background: #fff !important;}
+.opened a > svg {fill: #fff}
 
 @media screen and (min-width: 1024px) and (max-width: 1065px) {
     .header { padding: 1.25rem 1rem !important; }

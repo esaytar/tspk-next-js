@@ -3,22 +3,3 @@
 .menuMobile.active {top: 0; opacity: 1;}
 
 html:has(.menuMobile.active) {overflow: hidden;}
-
-header:has(.menuMobile.active) span ~ a, 
-header:has(.menuMobile.active) li,
-header:has(.menuMobile.active) a > svg { color: #fff; fill: #fff; stroke: #fff; }
-
-.header:has(.menuMobile.active) li > a {color: rgb(255 255 255 / 0.6);}
-
-.header:has(.menuMobile.active) span svg { stroke: #fff; }
-
-.mob-social > a svg {width: 20px !important; height: 20px !important;}
-
-@keyframes animMenu {
-    0% {
-        margin-top: -100%;
-    }
-    100% {
-        margin-top: 0;
-    }
-}

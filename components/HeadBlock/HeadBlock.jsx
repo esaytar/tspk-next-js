@@ -13,7 +13,7 @@ export default function HeadBlock() {
                     <source src='/video/video-main_page.webm' type='video/webm'/>
                 </video>
                 <div className='text-white flex gap-[3.625rem] items-center w-full py-[9.7rem] px-[1.88rem]
-                lg:max-w-[80rem] 2xl:max-w-[73%] 2xl:min-w-[84.5rem] lg:pt-[15rem] lg:px-0'>
+                lg:pt-[15rem] lg:px-10'>
                     <div className='w-full flex flex-col gap-10 lg:max-w-[49.5rem]'>
                         <div className={`flex flex-col gap-5 ${raleway.className}`}>
                             <p className='text-base lg:text-18'>Государственное автономное профессиональное образовательное <br /> учреждение Самарской области</p>
