@@ -10,7 +10,7 @@ export default function HeadBlock() {
         <div className='relative'>
             <div className={`pic w-full flex flex-col items-center lg:pt-10 lg:pb-[14rem] relative rounded-[1.25rem] overflow-hidden`}>
                 <video loop autoPlay muted poster='/video/video-bg.jpg' className='absolute top-0 left-0 -z-10 w-full h-full object-cover brightness-50'>
-                    <source src='/video/video-main_page.webm' type='video/webm'/>
+                    {/* <source src='/video/video-main_page.webm' type='video/webm'/> */}
                 </video>
                 <div className='text-white flex gap-[3.625rem] items-center w-full py-[9.7rem] px-[1.88rem]
                 lg:pt-[15rem] lg:px-10'>
