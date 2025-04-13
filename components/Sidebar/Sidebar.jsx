@@ -25,9 +25,9 @@ export default function Sidebar() {
     };
 
     const menuAccArray = [
-        { name: 'Сведения об образовательной организации', child: <DataCollegeMenu color='!text-white/60' main='pl-11 pt-5'/>, img: infoImg },
-        { name: 'Колледж', child: <CollegeMenu color='!text-white/60' main='pl-11 pt-5'/>, img: collegeImg },
-        { name: 'БПОО', child: <BPOOMenu color='!text-white/60'  main='pl-11 pt-5'/>, img: bpooImg }
+        { name: 'Сведения об образовательной организации', child: <DataCollegeMenu color='text-white/60!' main='pl-11 pt-5'/>, img: infoImg },
+        { name: 'Колледж', child: <CollegeMenu color='text-white/60!' main='pl-11 pt-5'/>, img: collegeImg },
+        { name: 'БПОО', child: <BPOOMenu color='text-white/60!'  main='pl-11 pt-5'/>, img: bpooImg }
     ]
     const menuArray = [
         {name: 'Расписание', imgUrl: calendImg, link: '/raspisanie'},

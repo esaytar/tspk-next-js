@@ -86,7 +86,7 @@ export default function NewsBlock() {
                 )})
                 setNews(newsItems)
             }).catch(err => {
-                setNews(<p className='text-[1.5rem] text-center text-grayMainText w-full'>Новости на данный момент недоступны</p>)
+                setNews(<p className='text-[1.5rem] text-center text-gray-main-text w-full'>Новости на данный момент недоступны</p>)
                 console.error('There was a problem with your fetch operation:', err);
             })
         }
@@ -134,10 +134,10 @@ export default function NewsBlock() {
         <div className='flex flex-col lg:gap-10 gap-[1.43rem] w-full relative'> 
             <NewsModal/>
             <div className='flex justify-between w-full items-center'>
-                <p className='text-grayText text-[1.29rem] lg:text-[1.81rem] font-medium'>Новости</p>
+                <p className='text-main-gray text-[1.29rem] lg:text-[1.81rem] font-medium'>Новости</p>
                 <div className='flex gap-2'>
-                    <button className='disabled:opacity-50 custom-prev size-[2.19rem] p-3 text-center border-2 border-mainBlue flex justify-center items-center'><ArrowSmall style='stroke-mainBlue min-w-max stroke-2 rotate-90'/></button>
-                    <button className='disabled:opacity-50 custom-next size-[2.19rem] p-3 text-center border-2 border-mainBlue flex justify-center items-center'><ArrowSmall style='stroke-mainBlue min-w-max stroke-2 -rotate-90'/></button>
+                    <button className='disabled:opacity-50 cursor-pointer custom-prev size-[2.19rem] p-3 text-center border-2 border-main-blue flex justify-center items-center'><ArrowSmall style='stroke-main-blue min-w-max stroke-2 rotate-90'/></button>
+                    <button className='disabled:opacity-50 cursor-pointer custom-next size-[2.19rem] p-3 text-center border-2 border-main-blue flex justify-center items-center'><ArrowSmall style='stroke-main-blue min-w-max stroke-2 -rotate-90'/></button>
                 </div>
             </div>
             <div className='flex flex-col items-center gap-[3.125rem]'> 

@@ -7,7 +7,7 @@ export default function DemExamCard({img, name, txtLinks}) {
         <div className="group w-full rounded-[10px] relative overflow-hidden flex justify-center items-center cursor-pointer">
             <p className='text-white text-18 font-medium text-center absolute z-10 w-11/12 
             group-hover:rotate-180 group-hover:-z-0 perspective-normal'>{name}</p>
-            <ul className='z-0 absolute w-full h-full text-center backface-hidden bg-mainBlue/50 flex flex-col justify-center 
+            <ul className='z-0 absolute w-full h-full text-center backface-hidden bg-main-blue/50 flex flex-col justify-center 
             group-hover:rotate-0 group-hover:z-10 perspective-normal transition-transform transition-500 gap-2.5 text-white'>
                 {txtLinks.length > 0 ? (
                     txtLinks.map((item, index) => (

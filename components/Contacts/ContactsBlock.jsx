@@ -37,14 +37,14 @@ export default function ContactsBlock() {
 
     return (
         <div className='flex flex-col gap-4 lg:gap-0'>
-            <p className='lg:text-[1.82rem] text-[1.29rem] text-grayText font-medium'>Контакты</p>
+            <p className='lg:text-[1.82rem] text-[1.29rem] text-main-gray font-medium'>Контакты</p>
             <div className='flex w-full justify-between lg:items-center flex-col lg:flex-row gap-[1.4rem] lg:gap-0'>
                 <div className="flex flex-col gap-5">
                     <div className='flex flex-col gap-4'>
-                        <p className='text-mainBlue lg:text-18 text-[1.14rem]'>Главный корпус</p>
+                        <p className='text-main-blue lg:text-18 text-[1.14rem]'>Главный корпус</p>
                         <ul className="flex flex-col lg:gap-2.5 gap-[0.34rem] text-base">
                             {contactInfos1.map((item, index) => (
-                                <li key={index} className='text-grayMainText flex gap-[0.31rem]'>
+                                <li key={index} className='text-gray-main-text flex gap-[0.31rem]'>
                                     <Image src={item.image} alt="иконка контактов" width={16} height={16}/>
                                     {item.link === '' ? (
                                         <p>{item.text}</p>
@@ -56,10 +56,10 @@ export default function ContactsBlock() {
                         </ul>
                     </div>
                     <div className='flex flex-col gap-4'>
-                        <p className='text-mainBlue lg:text-18 text-[1.14rem]'>Второй корпус</p>
+                        <p className='text-main-blue lg:text-18 text-[1.14rem]'>Второй корпус</p>
                         <ul className="flex flex-col lg:gap-2 gap-[0.34rem] text-base">
                             {contactInfos2.map((item, index) => (
-                                <li key={index} className='text-grayMainText flex gap-[0.31rem]'>
+                                <li key={index} className='text-gray-main-text flex gap-[0.31rem]'>
                                     <Image src={item.image} alt="иконка контактов" width={16} height={16}/>
                                     {item.link === '' ? (
                                         <p>{item.text}</p>

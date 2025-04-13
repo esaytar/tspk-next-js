@@ -7,6 +7,7 @@ import Script from "next/script";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/Header/Header";
 import ArrowLong from "../components/ui/ArrowLong";
+import UpButton from "../components/ui/UpButton";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ['400', '500'] });
 
@@ -16,11 +17,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
-    <html lang="en" className="!block">
+    <html lang="en" className="block!">
       <head>
-        <link rel="icon" href="/images/logo-blue.png"/>
+        <link rel="icon" href="/images/logo-favicon.png"/>
         <Script src="https://lidrekon.ru/slep/js/jquery.js" strategy="afterInteractive" />
         <Script src="https://lidrekon.ru/slep/js/uhpv-full.min.js" strategy="afterInteractive" />
       </head>
@@ -39,9 +39,7 @@ export default function RootLayout({ children }) {
             <MarqueeBlock/>
             <Footer/>
           </div>
-          <div className="size-[50px] rounded-4xl bg-white shadow-newShad px-6 py-4 absolute top-0 right-0">
-            <ArrowLong style="stroke-mainBlue -rotate-90"/>
-          </div>
+          <UpButton/>
         </div>
       </body>
     </html>

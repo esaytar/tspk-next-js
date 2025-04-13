@@ -17,7 +17,7 @@ export default function DropDownMenu({styles, main, content, linkValue, menuRef}
     return (
         <div ref={menuRef} className={`drop lg:max-w-[80rem] 2xl:max-w-[73%] 2xl:min-w-[84.5rem] w-full rounded-[1rem] px-10 py-5 fixed mt-[105px] ${styles} duration-[.1s] z-20`}>
             <DataCollegeMenu ulID={0} index={indexMenu} main={main}></DataCollegeMenu>
-            <CollegeMenu ulID={1} index={indexMenu} main={main} gap='!gap-12'></CollegeMenu>
+            <CollegeMenu ulID={1} index={indexMenu} main={main} gap='gap-12!'></CollegeMenu>
             <BPOOMenu ulID={2} index={indexMenu} main={main}></BPOOMenu>
         </div>
     )

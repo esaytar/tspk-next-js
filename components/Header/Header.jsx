@@ -78,7 +78,7 @@ export default function Header() {
         <div className='flex lg:hidden w-full justify-center absolute left-0 lg:mt-10'>
             <header style={isTransparence ? {backgroundColor: "transparent"} : {backgroundColor: "white"}} 
                 className={`${styles.header} ${isTransparence ? styles.light : styles.dark} ${dropdown.isMobileOpen ? styles.opened : ''}
-                px-[1.88rem] py-[1.25rem] duration-[.2s] w-full flex justify-between items-center fixed z-[21] bg-none
+                px-[1.88rem] py-[1.25rem] duration-[.2s] w-full flex justify-between items-center fixed z-21 bg-none
                  lg:rounded-[1rem] lg:px-10 lg:py-5`}>
                 <LogoTSPK styles={` w-[3.2rem]`}/>
                 <button className={`${styles.btnBurger} flex flex-col gap-[7px] lg:hidden z-10 pointer`} onClick={() => dropdown.reverseStatus()}>

@@ -20,7 +20,7 @@ export default function HeadBlock() {
                             <p className='uppercase text-[2.14rem] leading-[120%] lg:text-[3rem] lg:leading-[3.52rem] font-bold'>Тольяттинский <br /> социально-педагогический колледж</p>
                         </div>
                         <div className='flex flex-col lg:flex-row gap-5 lg-gap-[1.88rem] items-start leading-[1.32rem]'>
-                            <button className="px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-5 text-[1.14rem] bg-mainBlue flex items-center justify-center hover:bg-[#0949C2] duration-[.1s]">
+                            <button className="px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-5 text-[1.14rem] cursor-pointer bg-main-blue flex items-center justify-center hover:bg-[#0949C2] duration-[.1s]">
                                 <a href="http://x927215g.beget.tech/index.html" target="_blank" rel="noopener">Инвестируй в своё будущее</a>
                                 <Image src={arrowLong} className={styles.image} alt="стрелка вправо" />
                             </button>
@@ -34,7 +34,7 @@ export default function HeadBlock() {
                 </div>
             </div>
             <div className='bg-white rounded-[100%] absolute -bottom-20 size-[9.38rem] translate-x-[-50%] p-1 left-1/2 flex justify-center cursor-pointer'>
-                {/* <svg className={`${raleway.className} fill-mainGray`} viewBox="0 0 100 100" width="100%" height="100%">
+                {/* <svg className={`${raleway.className} fill-main-gray`} viewBox="0 0 100 100" width="100%" height="100%">
                     <path id="circle" d="M 50,13 a 38,38 0 1,1 0,76 a 38,38 0 1,1 0,-76" className='fill-none' />
                     <text letterSpacing="-0.5" >
                         <textPath href="#circle" >

@@ -7,8 +7,7 @@ export default function LinkedImage({link, image, alt}) {
                 id='image-link' 
                 src={image.src}
                 alt={alt} 
-                className='rounded-[0.625rem] h-full mx-5' 
-                style={{boxShadow: '4px 4px 10px 0 rgba(69, 129, 246, 0.15)',}} 
+                className='rounded-[0.625rem] h-full mx-5 shadow-main' 
             />
         </Link>
     ) 

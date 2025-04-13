@@ -4,10 +4,10 @@ export default function FormPart({labelName, placeholderName, nameFor, inputType
             <label htmlFor={nameFor}>{labelName}</label>
             {inputType !== '' ? (
                 <input type={inputType} name={nameFor} placeholder={placeholderName}
-                className='bg-mainBlue/5 text-grayText/50 p-4 rounded-[10px]' />
+                className='bg-main-blue/5 text-main-gray/50 p-4 rounded-[10px]' />
             ) : (
                 <textarea name={nameFor} placeholder={placeholderName}
-                className='bg-mainBlue/5 text-grayText/50 p-4 rounded-[10px] resize-none min-h-28'></textarea>
+                className='bg-main-blue/5 text-main-gray/50 p-4 rounded-[10px] resize-none min-h-28'></textarea>
             )}
         </div>
     )

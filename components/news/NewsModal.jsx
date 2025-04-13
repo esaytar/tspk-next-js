@@ -32,7 +32,7 @@ export default function NewsModal() {
                     <p>{textNews}</p>
                     <Image src={closeIcon} alt='закрыть окно' onClick={() => setIsOpened(false)} className='cursor-pointer'/>
                 </div>
-                <p className='text-mainBlue self-end'>{dateNews}</p>
+                <p className='text-main-blue self-end'>{dateNews}</p>
             </div>
             <div className={`${imageNews.length >= 2 ? 'order-2 grid' : 'lg:-order-1 w-full'} lg:grid-cols-2 gap-2.5`}>
                 {imageNews.map((img, index) => (

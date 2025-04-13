@@ -8,7 +8,7 @@ import QuickAccessBlock from "../components/QuickAccessBlock";
 export default function Home() {
   return (
     <>
-      <div id="win-dark" className="hidden bg-grayText/50 top-0 left-0 z-[19] min-h-dvh w-full fixed"></div>
+      <div id="win-dark" className="hidden bg-main-gray/50 top-0 left-0 z-19 min-h-dvh w-full fixed"></div>
       <div className="mt-5 mb-16 w-full rounded-[1.25rem]">
         <HeadBlock/>
       </div>
