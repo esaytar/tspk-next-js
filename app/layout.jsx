@@ -6,6 +6,7 @@ import CheckRedirectFunc from "../components/CheckRedirectFunc";
 import Script from "next/script";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/Header/Header";
+import ArrowLong from "../components/ui/ArrowLong";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ['400', '500'] });
 
@@ -23,9 +24,9 @@ export default function RootLayout({ children }) {
         <Script src="https://lidrekon.ru/slep/js/jquery.js" strategy="afterInteractive" />
         <Script src="https://lidrekon.ru/slep/js/uhpv-full.min.js" strategy="afterInteractive" />
       </head>
-      <body className={roboto.className}>
+      <body className={`${roboto.className} `}>
         <CheckRedirectFunc/>
-        <div className="w-full flex flex-col lg:flex-row items-center overflow-hidden">
+        <div className="w-full flex flex-col lg:flex-row items-center overflow-hidden relative">
           <Header/>
           <div className="hidden lg:block">
             <Sidebar/>
@@ -37,6 +38,9 @@ export default function RootLayout({ children }) {
             </div>
             <MarqueeBlock/>
             <Footer/>
+          </div>
+          <div className="size-[50px] rounded-4xl bg-white shadow-newShad px-6 py-4 absolute top-0 right-0">
+            <ArrowLong style="stroke-mainBlue -rotate-90"/>
           </div>
         </div>
       </body>
