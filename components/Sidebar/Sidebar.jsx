@@ -39,7 +39,7 @@ export default function Sidebar() {
             <div className='flex flex-col gap-5 w-full'>
                 <div className={`${raleway.className} flex gap-5 items-center`}>
                     <LogoTSPK styles='fill-white hidden lg:block'/>
-                    <p className='lg:text-[0.875rem] font-medium text-white hidden lg:block'>Государственное автономное профессиональное образовательное учреждение Самарской области "Тольяттинский социально-педагогический колледж"</p>
+                    <p className='lg:text-[0.875rem] font-medium text-white hidden lg:block'>Государственное автономное профессиональное образовательное учреждение Самарской области &quot;Тольяттинский социально-педагогический колледж&quot;</p>
                 </div>
                 <div className='bg-white/5 rounded-[10px] p-4 flex items-center gap-2.5 mt-[50px] lg:mt-0'>
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

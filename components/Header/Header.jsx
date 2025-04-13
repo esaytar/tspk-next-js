@@ -2,10 +2,8 @@
 import { usePathname } from "next/navigation"
 import {useRef, useState, useEffect} from 'react'
 import useDropdown from '../../store/useDropdown'
-import dynamic from "next/dynamic"
 import styles from './Header.module.css'
 import LogoTSPK from "../ui/icons/LogoTSPK"
-import Sidebar from "../Sidebar/Sidebar"
 import MenuMobile from "../menu/menuMobile/MenuMobile"
 
 export default function Header() {
