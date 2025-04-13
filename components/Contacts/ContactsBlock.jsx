@@ -71,7 +71,7 @@ export default function ContactsBlock() {
                         </ul>
                     </div>
                 </div>
-                <Map styles='w-full h-[15rem] lg:w-[57rem] lg:h-[21rem] rounded-[15px]'/>
+                <Map styles='w-full h-52 lg:w-212 lg:h-84 rounded-2xl'/>
             </div>
         </div>
     )
