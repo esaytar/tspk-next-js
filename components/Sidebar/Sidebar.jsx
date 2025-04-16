@@ -72,18 +72,18 @@ export default function Sidebar() {
                 </nav>
             </div>
 
-            <div className='sticky -bottom-4 z-10 bg-[#152441] w-full py-5'>
-                <button className=' rounded-[10px] p-4 flex gap-2.5 bg-white/10 items-center w-full duration-[.1s]'>
-                    <Image src={eye} 
+            <div className='sticky -bottom-4 z-10 bg-[#152441] w-full py-5 '>
+                <button
                     id="specialButton"
-                    alt="версия для слабовидящих" 
                     title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" 
-                    width={20} height={15} 
-                    style={{height: 'auto', width: 'auto'}} />
+                    className='rounded-[10px] p-4 flex gap-2.5 cursor-pointer bg-white/10 items-center w-full duration-[.1s]'>
+                    <Image src={eye} 
+                        width={20} height={15} 
+                        alt="версия для слабовидящих" 
+                        style={{height: 'auto', width: 'auto'}} />
                     <p className='text-white'>Версия для слабовидящих</p>
                 </button>
             </div>
-
         </div>
     )
 }

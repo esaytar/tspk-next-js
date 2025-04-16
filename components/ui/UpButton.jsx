@@ -21,7 +21,8 @@ export default function UpButton() {
     }, [])
 
     return (
-        <button id='up' className={`${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'} z-10 size-[50px] transition-opacity rounded-full bg-white shadow-main fixed bottom-5 right-5 cursor-pointer flex items-center justify-center`}>
+        <button id='up' className={`${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'} z-10 size-[50px] transition-opacity rounded-full 
+        bg-white shadow-main fixed bottom-5 right-5 cursor-pointer flex items-center justify-center`}>
             <ArrowLong style="stroke-main-blue -rotate-90"/>
         </button>
     )
