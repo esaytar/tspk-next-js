@@ -7,7 +7,7 @@ import Script from "next/script";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/Header/Header";
 import UpButton from "../components/ui/UpButton";
-import EmptyBlock from "../components/menu/emptyBlock";
+import EmptyBlock from "../components/menu/EmptyBlock";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ['400', '500'] });
 
