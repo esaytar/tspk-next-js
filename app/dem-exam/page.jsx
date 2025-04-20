@@ -54,7 +54,7 @@ export default function DemExam() {
 
     return (
         <div className="flex flex-col gap-[1.43rem] w-full mt-[6.75rem]
-            md:gap-[3.75rem] lg:mt-10 lg:pr-5 lg:p-0">
+            lg:mt-10 lg:pr-5 lg:p-0 xl:w-[73%] md:gap-[3.75rem] xl:p-0 2xl:min-w-[84.5rem] lg:max-w-[80rem]">
             <div className="flex flex-col gap-5">
                 <h1 className="text-[1.29rem] lg:text-[1.81rem] font-medium leading-[33.98px]">Демонcтрационный экзамен</h1>
                 <p className="leading-[23.44px] text-[1.14rem] lg:text-[1.25rem]">Это форма аттестации по образовательным программам среднего профессионального образования, которая проводится преимущественно в форме практических заданий в условиях реальных или смоделированных производственных процессов, направленная на определение уровня освоения экзаменуемым образовательной программы и степени сформированности профессиональных знаний, умений и навыков.</p>

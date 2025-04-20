@@ -6,8 +6,8 @@ import CheckRedirectFunc from "../components/CheckRedirectFunc";
 import Script from "next/script";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/Header/Header";
-import ArrowLong from "../components/ui/ArrowLong";
 import UpButton from "../components/ui/UpButton";
+import EmptyBlock from "../components/menu/emptyBlock";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ['400', '500'] });
 
@@ -27,13 +27,12 @@ export default function RootLayout({ children }) {
       <body className={`${roboto.className} `}>
         <CheckRedirectFunc/>
         <div className="w-full flex flex-col lg:flex-row items-center overflow-hidden relative">
-          <Header/>
-          <div className="hidden lg:block">
+          <Header>
             <Sidebar/>
-          </div>
-          <div className="min-w-[27%] min-h-screen hidden lg:block"></div>
-          <div className="flex flex-col w-full gap-[1.42rem] lg:gap-14 lg:max-w-[73%]">
-            <div className="px-5 lg:px-10 flex flex-col gap-10">
+          </Header>
+          <EmptyBlock/>
+          <div className="flex flex-col w-full gap-[1.42rem] lg:gap-14 md:gap-[3.75rem] xl:p-0 2xl:min-w-328 lg:max-w-full transition-[width] duration-500 ease-in">
+            <div className="px-5 lg:px-10 flex flex-col gap-10 items-center">
               {children}
             </div>
             <MarqueeBlock/>

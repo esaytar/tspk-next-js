@@ -6,7 +6,7 @@ import styles from './Header.module.css'
 import LogoTSPK from "../ui/icons/LogoTSPK"
 import MenuMobile from "../menu/menuMobile/MenuMobile"
 
-export default function Header() {
+export default function Header({children}) {
     const dropdown = useDropdown()
     const pathname = usePathname()
     const [isScrolled, setIsScrolled] = useState(false)
@@ -72,19 +72,17 @@ export default function Header() {
         return () => document.removeEventListener('click', handleClickOutside)
     }, [])
 
-    
-
     return (
-        <div className='flex lg:hidden w-full justify-center absolute left-0 lg:mt-10'>
+        <div className='flex w-full lg:max-w-[90px] lg:h-dvh justify-center absolute left-0 lg:mt-10'>
             <header style={isTransparence ? {backgroundColor: "transparent"} : {backgroundColor: "white"}} 
-                className={`${styles.header} ${isTransparence ? styles.light : styles.dark} ${dropdown.isMobileOpen ? styles.opened : ''}
-                px-[1.88rem] py-[1.25rem] duration-[.2s] w-full flex justify-between items-center fixed z-21 bg-none
-                 lg:rounded-[1rem] lg:px-10 lg:py-5`}>
-                <LogoTSPK styles={` w-[3.2rem]`}/>
+                className={`${styles.header} ${isTransparence ? styles.light : styles.dark} ${dropdown.isMobileOpen ? styles.opened : ''} px-[1.88rem] py-[1.25rem] duration-[.2s] flex justify-between w-full lg:w-auto items-center fixed z-21 bg-none lg:rounded-[1rem] lg:px-0 lg:py-0`}>
+                <LogoTSPK styles={`lg:hidden w-[3.2rem]`}/>
                 <button className={`${styles.btnBurger} flex flex-col gap-[7px] lg:hidden z-10 cursor-pointer`} onClick={() => dropdown.reverseStatus()}>
                     <span className={styles.line}></span>
                 </button>
-                <MenuMobile status={dropdown.isMobileOpen ? 'active' : ''}/>
+                <MenuMobile status={dropdown.isMobileOpen ? 'active' : ''}>
+                    {children}
+                </MenuMobile>    
             </header>
         </div>
     )

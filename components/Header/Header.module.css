@@ -1,7 +1,7 @@
 .dark {background: #fff; box-shadow: 4px 4px 10px 0 rgba(69, 129, 246, 0.15);}
 
 .opened::before {
-    background: #152441 !important; 
+    background: #111 !important; 
     content: ''; 
     position: absolute; 
     width: 100%; 
@@ -12,12 +12,6 @@
 }
 
 @media (min-width: 1024px) {
-    .light li:hover > a, 
-    .light a ~ ul > li:hover, 
-    .light a:hover,
-    .dark a:hover, 
-    .dark a ~ ul > li:hover {color: #1763F4 !important;}
-    
     .light a:hover .arrowBottom, 
     .light li:hover .arrowBottom, 
     .dark a:hover .arrowBottom, 
@@ -26,8 +20,11 @@
     .light li > a {color: #141414 !important; }
 }
 
-.dark a > svg {fill: #141414; width: 3.2rem;}
-.light a > svg {fill: #fff; width: 3.2rem;}
+@media screen and (max-width: 1024px){
+    .dark a > svg {fill: #141414; width: 3.2rem;}
+    .light a > svg {fill: #fff; width: 3.2rem;}
+    
+}
 
 .header .btnBurger,
 .header .btnBurger .line {transition: all .3s; position: relative;}

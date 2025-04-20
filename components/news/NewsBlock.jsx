@@ -2,7 +2,7 @@
 import {useEffect, useRef, useState} from 'react'
 import NewsCard from './NewsCard'
 import { register } from 'swiper/element/bundle'
-const alternative = dynamic(() => import('@/img/alternative.jpg'))
+import alternative from '@/img/alternative.jpg'
 import axios from 'axios'
 import ArrowSmall from '../ui/ArrowSmall'
 const NewsModal = dynamic(() => import('./NewsModal'))
@@ -23,7 +23,11 @@ export default function NewsBlock() {
     function getImgUrl(attachments = 'unknown') {
         if (attachments === null || attachments.photo === null) return null
         const imagesArray = []
-
+        if (attachments === 'unknown') {
+            imagesArray.push(alternative.src)
+            return imagesArray
+        }
+        
         attachments.map((item) => {
             switch(item.type) {
                 case 'photo':

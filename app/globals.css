@@ -13,6 +13,7 @@
   --shadow-main: 4px 4px 10px 0 rgba(69, 129, 246, 0.15);
 
   --transition-property-card-reverse: transform 0.6s linear;
+  --transition-property-menu-open: opacity 0.5s ease-in 0.5s, width 0.5s ease-in 0.5s, padding 0.5s ease-in 0.5s;
 }
 
 /*
@@ -41,7 +42,8 @@ body {
     align-items: center; 
     color: #141414;
 }
-html {scroll-behavior: smooth; }
+html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+nav::-webkit-scrollbar {width: 0;}
 
 #directions {scroll-margin-top: 85px;}
 

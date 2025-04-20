@@ -32,7 +32,7 @@ const pageCardsInfos = [
 export default function studentsPage() {
     return (
         <div className="flex flex-col gap-[1.43rem] w-full mt-[6.75rem]
-            xl:p-0 md:gap-10 lg:mt-10">
+            lg:mt-10 xl:w-[73%] md:gap-[3.75rem] xl:p-0 2xl:min-w-[84.5rem] lg:max-w-[80rem]">
             <CollegeHeroBlock
                 heading="Дорогие студенты!"
                 desc="Мы стремимся сделать вашу учебу максимально комфортной. Здесь вы найдете всю необходимую информацию: расписания, учебные материалы, новости и объявления"

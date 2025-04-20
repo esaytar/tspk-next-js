@@ -1,20 +1,23 @@
+'use client'
 import styles from './HeadBlock.module.css'
 import arrowLong from '@/img/icons/arrow-long.svg'
 import Image from "next/image";
 import { Raleway } from 'next/font/google';
 import ArrowLong from '../ui/ArrowLong';
+import useOpenSidebar from '../../store/useOpenSidebar';
 const raleway = Raleway({ subsets: ["latin"], weight: ['400', '700'] });
 
 export default function HeadBlock() {
+    const sidebar = useOpenSidebar()
     return (
         <div className='relative'>
             <div className={`pic w-full flex flex-col items-center lg:pt-10 lg:pb-[14rem] relative rounded-[1.25rem] overflow-hidden`}>
                 <video loop autoPlay muted poster='/video/video-bg.webp' className='absolute top-0 left-0 -z-10 w-full h-full object-cover brightness-50'>
                     <source src='/video/video-main_page.mp4' type='video/mp4'/>
                 </video>
-                <div className='text-white flex gap-[3.625rem] items-center w-full py-[9.7rem] px-[1.88rem]
-                lg:pt-[15rem] lg:px-10'>
-                    <div className='w-full flex flex-col gap-10 lg:max-w-[49.5rem]'>
+                <div className={`${sidebar.isOpen ? '' : 'justify-center'} text-white flex gap-[3.625rem] items-center w-full py-[9.7rem] px-[1.88rem] lg:pt-[15rem] lg:px-10`}>
+                    <div className='w-full flex flex-col gap-10 
+                    xl:w-[73%] md:gap-[3.75rem] xl:p-0 2xl:min-w-328 lg:max-w-[80rem]'>
                         <div className={`flex flex-col gap-5 ${raleway.className}`}>
                             <p className='text-base lg:text-18'>Государственное автономное профессиональное образовательное <br /> учреждение Самарской области</p>
                             <p className='uppercase text-[2.14rem] leading-[120%] lg:text-[3rem] lg:leading-[3.52rem] font-bold'>Тольяттинский <br /> социально-педагогический колледж</p>

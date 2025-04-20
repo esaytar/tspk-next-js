@@ -24,7 +24,7 @@ export default function NewsCard({text, date, link, img}) {
                 </div>
             </div>
             <button onClick={openModal}
-                className="border border-main-blue rounded-[1.07rem] uppercase text-base w-full py-3 px-6 order-2 self-center flex items-center justify-center text-main-blue
+                className="cursor-pointer border border-main-blue rounded-[1.07rem] uppercase text-base w-full py-3 px-6 order-2 self-center flex items-center justify-center text-main-blue
                 lg:normal-case lg:p-0 lg:w-fit lg:border-0 lg:rounded-[1.88rem] lg:self-start ">
                 Подробнее
                 <ArrowLong style='fill-main-blue ml-2 hidden lg:block'/>

@@ -9,7 +9,7 @@ export default function Contacts() {
     return (
         <>
             <div className="flex flex-col gap-[1.43rem] w-full mt-[6.75rem]
-            md:gap-10 lg:mt-10 lg:p-0">
+            lg:mt-10 lg:p-0 xl:w-[73%] md:gap-[3.75rem] xl:p-0 2xl:min-w-[84.5rem] lg:max-w-[80rem]">
                 <h1 className="text-[1.29rem] lg:text-[1.81rem] font-medium leading-[33.98px]">Контакты</h1>
                 <div className="flex gap-10 items-center flex-col lg:flex-row">
                     <ContactsForm/>

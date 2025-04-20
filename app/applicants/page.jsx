@@ -44,7 +44,7 @@ const pageCardsInfos = [
 export default function applicantsPage() {
     return (
         <div className="flex flex-col gap-[1.43rem] w-full mt-[6.75rem]
-            xl:p-0 md:gap-10 lg:mt-10">
+            lg:mt-10 xl:w-[73%] md:gap-[3.75rem] xl:p-0 2xl:min-w-[84.5rem] lg:max-w-[80rem]">
             <CollegeHeroBlock
                 heading="Добро пожаловать, абитуриент!"
                 desc="Готов стать студентом нашего колледжа? В этом разделе ты найдёшь всё, что нужно знать о поступлении! Мы собрали для тебя самые интересные и полезные сведения о наших программах, условиях приёма и незабываемой студенческой жизни. Начни своё знакомство с колледжем прямо сейчас и открой для себя новые возможности!"

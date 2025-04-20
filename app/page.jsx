@@ -1,6 +1,5 @@
 import ContactsBlock from "../components/Contacts/ContactsBlock";
 import DirectionEdBlock from "../components/DirectionEdBlock";
-import Documents from "../components/Documents";
 import HeadBlock from "../components/HeadBlock/HeadBlock";
 import NewsBlock from "../components/news/NewsBlock";
 import QuickAccessBlock from "../components/QuickAccessBlock";
@@ -12,8 +11,7 @@ export default function Home() {
       <div className="mt-5 mb-16 w-full rounded-[1.25rem]">
         <HeadBlock/>
       </div>
-      <div className="flex flex-col gap-[1.43rem] w-full
-        xl:p-0 md:gap-[3.75rem] relative">
+      <div className="flex flex-col gap-[1.43rem] px-[1.42rem] w-full xl:w-[73%] md:gap-[3.75rem] xl:p-0 2xl:min-w-328 lg:max-w-[80rem] relative">
         <QuickAccessBlock/>
         <DirectionEdBlock/>
         <NewsBlock/>
