@@ -77,7 +77,7 @@ export default function Header({children}) {
             <header style={isTransparence ? {backgroundColor: "transparent"} : {backgroundColor: "white"}} 
                 className={`${styles.header} ${isTransparence ? styles.light : styles.dark} ${dropdown.isMobileOpen ? styles.opened : ''} px-[1.88rem] py-[1.25rem] duration-[.2s] flex justify-between w-full lg:w-auto items-center fixed z-21 bg-none lg:rounded-[1rem] lg:px-0 lg:py-0`}>
                 <LogoTSPK styles={`lg:hidden w-[3.2rem]`}/>
-                <button className={`${styles.btnBurger} flex flex-col gap-[7px] lg:hidden z-10 cursor-pointer`} onClick={() => dropdown.reverseStatus()}>
+                <button className={`${styles.btnBurger} icon flex flex-col gap-[7px] lg:hidden z-10 cursor-pointer`} onClick={() => dropdown.reverseStatus()}>
                     <span className={styles.line}></span>
                 </button>
                 <MenuMobile status={dropdown.isMobileOpen ? 'active' : ''}>

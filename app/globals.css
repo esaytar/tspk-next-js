@@ -12,6 +12,8 @@
 
   --shadow-main: 4px 4px 10px 0 rgba(69, 129, 246, 0.15);
 
+  --width-calc: calc(100% - 90px);
+
   --transition-property-card-reverse: transform 0.6s linear;
   --transition-property-menu-open: opacity 0.5s ease-in 0.5s, width 0.5s ease-in 0.5s, padding 0.5s ease-in 0.5s;
 }
@@ -44,6 +46,14 @@ body {
 }
 html {scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 nav::-webkit-scrollbar {width: 0;}
+
+body:has(#special) .icon { fill: #000; }
+body:has(#special) .icon-stroke { stroke: #000; }
+body:has(#special) .icons-image { filter: brightness(10); }
+body:has(#special) .border-0 { border-width: 1px; }
+body:has(#special) .border-0 > a  { background: transparent !important; }
+
+
 
 #directions {scroll-margin-top: 85px;}
 

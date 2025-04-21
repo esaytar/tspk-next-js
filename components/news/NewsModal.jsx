@@ -26,7 +26,7 @@ export default function NewsModal() {
     return (
         <div ref={modalRef} 
         className={`modal ${isOpened ? 'flex' : 'hidden'} ${imageNews.length >= 2 ? 'flex-col gap-5' : 'lg:flex-row gap-5 lg:gap-10 flex-col'} 
-        lg:w-full p-4 lg:p-10 rounded-[1rem] absolute -translate-y-1/6 top-0 lg:left-0 z-20 bg-white`}>
+        lg:w-full p-4 lg:p-10 rounded-[1rem] absolute -translate-y-1/6 top-0 lg:left-0 z-20 bg-white border border-transparent`}>
             <div className='flex flex-col gap-5 text-base lg:text-[1.25rem]'>
                 <div className='flex gap-10 items-start'>
                     <p>{textNews}</p>

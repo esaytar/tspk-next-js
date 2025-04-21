@@ -1,7 +1,4 @@
 'use client'
-import styles from './HeadBlock.module.css'
-import arrowLong from '@/img/icons/arrow-long.svg'
-import Image from "next/image";
 import { Raleway } from 'next/font/google';
 import ArrowLong from '../ui/ArrowLong';
 import useOpenSidebar from '../../store/useOpenSidebar';
@@ -25,12 +22,12 @@ export default function HeadBlock() {
                         <div className='flex flex-col lg:flex-row gap-5 lg-gap-[1.88rem] items-start leading-[1.32rem]'>
                             <button className="px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-5 text-[1.14rem] cursor-pointer bg-main-blue flex items-center justify-center hover:bg-[#0949C2] duration-[.1s]">
                                 <a href="http://x927215g.beget.tech/index.html" target="_blank" rel="noopener">Инвестируй в своё будущее</a>
-                                <Image src={arrowLong} className={styles.image} alt="стрелка вправо" />
+                                <ArrowLong style='fill-white ml-2 hidden lg:block size-5'/>
                             </button>
                             <a href='#directions'
                             className='border-white border-[1px] px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-3 flex text-[1.14rem]'>
                                 Направления
-                                <Image src={arrowLong} className={`rotate-90 ${styles.image}`} alt="стрелка вниз" />
+                                <ArrowLong style='fill-white ml-2 hidden rotate-90 lg:block size-5'/>
                             </a>
                         </div>
                     </div>

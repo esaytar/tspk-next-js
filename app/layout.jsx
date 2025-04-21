@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
             <Sidebar/>
           </Header>
           <EmptyBlock/>
-          <div className="flex flex-col w-full gap-[1.42rem] lg:gap-14 md:gap-[3.75rem] xl:p-0 2xl:min-w-328 lg:max-w-full transition-[width] duration-500 ease-in">
+          <div className="flex flex-col w-full gap-[1.42rem] lg:gap-14 md:gap-[3.75rem] xl:p-0 2xl:min-w-328 lg:w-calc transition-[width] duration-500 ease-in">
             <div className="px-5 lg:px-10 flex flex-col gap-10 items-center">
               {children}
             </div>
