@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "docs",
+  "info": {
+    "singularName": "doc",
+    "pluralName": "docs",
+    "displayName": "Doc",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "contract",
+        "report",
+        "other"
+      ]
+    },
+    "publishAt": {
+      "type": "date"
+    }
+  }
+}
