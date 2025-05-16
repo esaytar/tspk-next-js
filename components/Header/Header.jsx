@@ -79,7 +79,7 @@ export default function Header({children}) {
         }
         document.addEventListener('click', handleClickOutside)
         return () => document.removeEventListener('click', handleClickOutside)
-    }, [])
+    }, [dropdown])
 
     return (
         <div className='flex w-full lg:max-w-[90px] lg:h-dvh justify-center absolute left-0 lg:mt-10 z-50'>
