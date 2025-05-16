@@ -1,4 +1,3 @@
-import React from 'react'
 import LogoTSPK from '../../components/ui/icons/LogoTSPK'
 import { basicInfo } from '../../content/collegeInfo';
 import InfoString from '../../components/infoPages/InfoString';

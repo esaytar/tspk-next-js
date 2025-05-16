@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/img/*": ["/public/images/*"]
+      "@/img/*": ["/public/images/*"],
+      "@/app/*": ["/app/*"]
     }
   }
 }

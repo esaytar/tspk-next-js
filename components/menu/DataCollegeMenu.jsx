@@ -10,7 +10,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: true,
             value: 'Структура и органы управления образовательной организацией',
-            link: '/sveden/structure-college'
+            link: '/sveden/structure'
         },
         {
             classes: false,
