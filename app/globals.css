@@ -53,7 +53,10 @@ body:has(#special) .icons-image { filter: brightness(10); }
 body:has(#special) .border-0 { border-width: 1px; }
 body:has(#special) .border-0 > a  { background: transparent !important; }
 
-
+.menu * {
+  will-change: transform, opacity, width;
+  backface-visibility: hidden;
+}
 
 #directions {scroll-margin-top: 85px;}
 

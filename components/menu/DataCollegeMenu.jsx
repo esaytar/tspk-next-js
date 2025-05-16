@@ -5,7 +5,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Основные сведения',
-            link: '/sveden/basic-data'
+            link: '/sveden/'
         },
         {
             classes: true,
@@ -70,10 +70,10 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
     ]
 
     return (
-        <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col text-[0.875rem] gap-2.5 ${main}`}>
+        <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col gap-2.5 ${main}`}>
             {items.map((item, index) => (
                 <li className={`${item.classes && liW ? liW : ''} w-fit`} key={index}>
-                    <Link href={item.link} className='text-white/60 hover:text-white'>
+                    <Link href={item.link} className={`${color === undefined ? 'text-white/60 hover:text-white' : color}`}>
                         {item.value}
                     </Link>
                 </li>

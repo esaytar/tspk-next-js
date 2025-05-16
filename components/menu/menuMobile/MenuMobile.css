@@ -1,4 +1,4 @@
-.menuMobile {top: -100vh; opacity: 0; transition: all .5s; overflow-y: auto;}
+.menuMobile {top: -100vh; opacity: 0; transition: top .5s; overflow-y: auto;}
 
 .menuMobile.active {top: 0; opacity: 1;}
 

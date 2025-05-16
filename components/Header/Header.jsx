@@ -54,15 +54,24 @@ export default function Header({children}) {
     }, [pathname, isMobile])
 
     useEffect(() => {
-        function resize() {
-            if (window.innerWidth > 1024) dropdown.close()
-            else dropdown.closeMobile()
-            setIsMobile(window.innerWidth <= 1024)
+        const prevWidth = window.innerWidth;
+
+        function handleResize() {
+            const currentWidth = window.innerWidth;
+            if (currentWidth === prevWidth) return;
+            
+            if (currentWidth > 1024) {
+                dropdown.close();
+            } else {
+                dropdown.closeMobile();
+            }
+            setIsMobile(currentWidth <= 1024);
         }
-        resize()
-        window.addEventListener('resize', resize)
-        return () => window.removeEventListener('resize', resize)
-    }, [])
+
+        handleResize(); 
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [dropdown]);
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -73,7 +82,7 @@ export default function Header({children}) {
     }, [])
 
     return (
-        <div className='flex w-full lg:max-w-[90px] lg:h-dvh justify-center absolute left-0 lg:mt-10'>
+        <div className='flex w-full lg:max-w-[90px] lg:h-dvh justify-center absolute left-0 lg:mt-10 z-50'>
             <header style={isTransparence ? {backgroundColor: "transparent"} : {backgroundColor: "white"}} 
                 className={`${styles.header} ${isTransparence ? styles.light : styles.dark} ${dropdown.isMobileOpen ? styles.opened : ''} px-[1.88rem] py-[1.25rem] duration-[.2s] flex justify-between w-full lg:w-auto items-center fixed z-21 bg-none lg:rounded-[1rem] lg:px-0 lg:py-0`}>
                 <LogoTSPK styles={`lg:hidden w-[3.2rem]`}/>

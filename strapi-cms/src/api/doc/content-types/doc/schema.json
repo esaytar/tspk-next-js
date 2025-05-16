@@ -28,9 +28,7 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "contract",
-        "report",
-        "other"
+        "Основные сведения"
       ]
     },
     "publishAt": {

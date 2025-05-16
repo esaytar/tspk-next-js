@@ -12,20 +12,21 @@ export default function HeadBlock() {
                 <video loop autoPlay muted poster='/video/video-bg.webp' className='absolute top-0 left-0 -z-10 w-full h-full object-cover brightness-50'>
                     <source src='/video/video-main_page.mp4' type='video/mp4'/>
                 </video>
-                <div className={`${sidebar.isOpen ? '' : 'justify-center'} text-white flex gap-[3.625rem] items-center w-full py-[9.7rem] px-[1.88rem] lg:pt-[15rem] lg:px-10`}>
-                    <div className='w-full flex flex-col gap-10 
-                    xl:w-[73%] md:gap-[3.75rem] xl:p-0 2xl:min-w-328 lg:max-w-[80rem]'>
-                        <div className={`flex flex-col gap-5 ${raleway.className}`}>
-                            <p className='text-base lg:text-18'>Государственное автономное профессиональное образовательное <br /> учреждение Самарской области</p>
+                <div className={`text-white flex gap-[3.625rem] items-center w-full py-[9.7rem] px-[1.88rem] lg:pt-[15rem] lg:px-10
+                    transition-all duration-700 justify-center`}>
+                    <div className={`w-full flex flex-col gap-10 xl:w-[73%] md:gap-[3.75rem] xl:pl-[1.88rem] 2xl:min-w-328 lg:max-w-[80rem]
+                        transition-all duration-700 ease-[cubic-bezier(0.2,0,0,1)]`}>
+                        <div className={`flex flex-col gap-5 ${raleway.className} `}>
+                            <p className='text-base lg:text-18 '>Государственное автономное профессиональное образовательное <br /> учреждение Самарской области</p>
                             <p className='uppercase text-[2.14rem] leading-[120%] lg:text-[3rem] lg:leading-[3.52rem] font-bold'>Тольяттинский <br /> социально-педагогический колледж</p>
                         </div>
-                        <div className='flex flex-col lg:flex-row gap-5 lg-gap-[1.88rem] items-start leading-[1.32rem]'>
+                        
+                        <div className='flex flex-col lg:flex-row gap-5 lg:gap-[1.88rem] items-start leading-[1.32rem]'>
                             <button className="px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-5 text-[1.14rem] cursor-pointer bg-main-blue flex items-center justify-center hover:bg-[#0949C2] duration-[.1s]">
                                 <a href="http://x927215g.beget.tech/index.html" target="_blank" rel="noopener">Инвестируй в своё будущее</a>
                                 <ArrowLong style='fill-white ml-2 hidden lg:block size-5'/>
                             </button>
-                            <a href='#directions'
-                            className='border-white border-[1px] px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-3 flex text-[1.14rem]'>
+                            <a href='#directions' className='border-white border-[1px] px-[1.86rem] py-4 lg:px-10 lg:py-[1.125rem] rounded-[1rem] gap-3 flex text-[1.14rem]'>
                                 Направления
                                 <ArrowLong style='fill-white ml-2 hidden rotate-90 lg:block size-5'/>
                             </a>

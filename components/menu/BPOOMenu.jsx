@@ -33,7 +33,7 @@ export default function BPOOMenu({ulID, index, main, liW, color}) {
         <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col text-[0.875rem] gap-2.5 ${main}`}>
             {items.map((item, index) => (
                 <li className={`${item.classes && liW ? liW : ''} w-fit`} key={index}>
-                    <Link href={item.link} className='text-white/60 hover:text-white'>
+                    <Link href={item.link} className={`${color === undefined ? 'text-white/60 hover:text-white' : color}`}>
                         {item.value}
                     </Link>
                 </li>
