@@ -5,6 +5,11 @@ import criteria from '@/img/college_images/criteria-image.jpg'
 import CollegeHeroBlock from '../../components/CollegeHeroBlock/CollegeHeroBlock'
 import bg from '@/img/main-teacher.jpg'
 
+export const metadata = {
+  title: "Преподавателям",
+  description: "",
+};
+
 const pageCardsInfos = [
     {
         urlImage: temps,

@@ -37,6 +37,7 @@ export default function NewsBlock() {
                     imagesArray.push(findMaxSizes(item.video.first_frame, item.type))
                     break
                 case 'doc':
+                    if (item.ext != "png" || item.ext != "jpg" || item.ext != "gif") return
                     imagesArray.push(findMaxSizes(item.doc.preview.photo.sizes, item.type))
                     break
                 case 'album':

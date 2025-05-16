@@ -8,6 +8,11 @@ import specialties from '@/img/college_images/specialties-image.jpg'
 import spisok from '@/img/college_images/spisok-zayavlenii-image.jpg'
 import bg from '@/img/main-apps.jpg'
 
+export const metadata = {
+  title: "Абитуриентам",
+  description: "",
+};
+
 const pageCardsInfos = [
     {
         urlImage: komissiya,

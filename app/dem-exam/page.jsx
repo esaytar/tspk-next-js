@@ -8,6 +8,11 @@ import specialChild from '@/img/dem-exam-images/special_children.jpg'
 import sport from '@/img/dem-exam-images/sport.jpg'
 import web from '@/img/dem-exam-images/web.jpg'
 
+export const metadata = {
+  title: "Демонстрационный экзамен",
+  description: "",
+};
+
 export default function DemExam() {
     const cards = [
         {

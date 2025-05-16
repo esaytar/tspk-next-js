@@ -3,6 +3,11 @@ import dynamic from "next/dynamic";
 import ContactsForm from "../../components/Contacts/ContactsForm";
 const Map = dynamic(() => import('../../components/ui/Map'))
 
+export const metadata = {
+  title: "Контакты",
+  description: "",
+};
+
 export default function Contacts() {
     const corpNames = ['1 КОРПУС (Мурысева 84)', '2 КОРПУС (Ленинградская 28)']
 

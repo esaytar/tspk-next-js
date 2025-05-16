@@ -6,6 +6,11 @@ import raspisanie from '@/img/college_images/raspisanie.jpg'
 import rabota from '@/img/college_images/trudoustroistvo.jpg'
 import bg from '@/img/main-students.jpg'
 
+export const metadata = {
+  title: "Студентам",
+  description: "",
+};
+
 const pageCardsInfos = [
     {
         urlImage: rabota,
