@@ -10,10 +10,15 @@ export default function HeadingInfoPage({titlePage, type}) {
     const [isOpened, setIsOpened] = useState(false)
     const pathname = usePathname()
     const listRef = useRef()
+    const [titleList, setTitleList] = useState('')
 
     useEffect(() => {
         setIsOpened(false)
     }, [pathname])
+
+    useEffect(() => {
+        setTitleList(document.title)
+    }, [])
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -34,7 +39,7 @@ export default function HeadingInfoPage({titlePage, type}) {
             <div ref={listRef} className='w-full relative text-18'>
                 <div className='flex w-full justify-between border-main-blue/50 border-[2px] rounded-[40px] px-[1.71rem] py-[0.86rem] items-center 
                     lg:px-10 lg:py-5 cursor-pointer' onClick={() => {setIsOpened(!isOpened)}}>
-                    <p className='text-main-blue'>{document.title}</p>
+                    <p className='text-main-blue'>{titleList}</p>
                     <ArrowSmall style='stroke-main-blue w-[23px] h-[12px]'/> 
                 </div>
                 {type === 'bpoo' && <BPOOMenu color="text-main-blue" main={listStyles}/>}
