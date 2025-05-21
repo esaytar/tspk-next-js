@@ -14,6 +14,7 @@ export default function DocsPage() {
         setDocs(data || []);
       } catch (err) {
         setError(err.message);
+        console.error('Load error:', err);
       } finally {
         setLoading(false);
       }
@@ -21,46 +22,58 @@ export default function DocsPage() {
     loadData();
   }, []);
 
-  if (loading) return <p>Загрузка...</p>;
-  if (error) return <p>Ошибка: {error}</p>;
+  if (loading) return <div className="text-center py-8">Загрузка документов...</div>;
+  if (error) return <div className="text-red-500 p-4">Ошибка: {error}</div>;
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-6">Документы</h1>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-8 text-center">Документы</h1>
       
       {docs.length === 0 ? (
-        <p>Документов пока нет</p>
+        <p className="text-center text-gray-500">Нет доступных документов</p>
       ) : (
-        <div className="space-y-4">
-          {docs.map((doc) => (
-            <DocItem key={doc.id} doc={doc} />
-          ))}
+        <div className="space-y-6">
+          {docs.map((doc) => {
+            const fileData = doc.attributes?.file?.data?.attributes;
+            const fileName = fileData?.name || doc.attributes?.title || 'Документ';
+            const fileUrl = fileData?.url;
+            const fileExt = fileData?.ext?.replace('.', '') || 'файл';
+
+            return (
+              <div key={doc.id} className="border-b border-gray-200 pb-4">
+                {fileUrl ? (
+                  <a
+                    href={`${process.env.NEXT_PUBLIC_STRAPI_URL}${fileUrl}`}
+                    download={fileName}
+                    className="flex items-center gap-3 group"
+                  >
+                    <div className="bg-blue-100 text-blue-800 px-3 py-2 rounded-lg">
+                      {fileExt.toUpperCase()}
+                    </div>
+                    <div>
+                      <p className="font-medium text-lg group-hover:text-blue-600">
+                        {doc.attributes.title || fileName}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {fileName} • {fileData?.size ? (fileData.size / 1024).toFixed(1) + ' KB' : ''}
+                      </p>
+                    </div>
+                  </a>
+                ) : (
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gray-100 text-gray-800 px-3 py-2 rounded-lg">
+                      ?
+                    </div>
+                    <p className="font-medium text-lg">
+                      {doc.attributes.title || 'Без названия'}
+                    </p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
-    </div>
-  );
-}
-
-function DocItem({ doc }) {
-
-  const title = doc.attributes?.title || 'Без названия';
-  const fileUrl = doc.attributes?.file?.data?.attributes?.url;
-
-  return (
-    <div className="border p-4 rounded-lg">
-      <h2 className="text-lg font-semibold">
-        {fileUrl ? (
-          <a 
-            href={`${process.env.NEXT_PUBLIC_STRAPI_URL}${fileUrl}`}
-            download
-            className="hover:text-blue-600"
-          >
-            {title}
-          </a>
-        ) : (
-          title
-        )}
-      </h2>
     </div>
   );
 }
