@@ -11,14 +11,14 @@
     z-index: 10;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     .light a:hover .arrowBottom, 
     .light li:hover .arrowBottom, 
     .dark a:hover .arrowBottom, 
     .dark li:hover .arrowBottom {stroke: #1763F4;}
 
     .light li > a {color: #141414 !important; }
-}
+} */
 
 @media screen and (max-width: 1024px){
     .dark a > svg {fill: #141414; width: 3.2rem;}

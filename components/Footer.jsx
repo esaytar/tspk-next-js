@@ -25,7 +25,7 @@ export default function Footer() {
                                 <CollegeMenu main='text-[0.85rem] lg:text-[0.75rem] gap-2.5 flex-col'/>
                             </li>
                             <li className="flex flex-col gap-[0.71rem] md:gap-5 text-white">
-                                <p className='text-[1.14rem] md:text-[1rem]'><a href="">БПОО</a></p>
+                                <p className='text-[1.14rem] md:text-[1rem]'>БПОО</p>
                                 <BPOOMenu main='text-[0.85rem] lg:text-[0.75rem] gap-2.5' liW='w-[16rem]!'/>
                                 <ul className='flex flex-col gap-[0.71rem] md:gap-5'>
                                     <li className='text-[1.14rem] lg:text-[1rem]'><Link href='/dem-exam'>Демонстрационный экзамен</Link></li>
@@ -39,7 +39,8 @@ export default function Footer() {
                         </ul>
                     </nav>
                 </div>
-                <p className='text-white text-center text-[0.85rem] md:text-[1rem]'>&copy; {new Date().getFullYear()} Государственное автономное профессиональное образовательное учреждение Самарской области &quot;Тольяттинский социально-педагогический колледж&quot;</p>
+                <p className='text-white text-center text-[0.85rem] md:text-[1rem]'>
+                    &copy; {new Date().getFullYear()} Государственное автономное профессиональное образовательное учреждение Самарской области &quot;Тольяттинский социально-педагогический колледж&quot;</p>
             </div>
         </footer>
     )

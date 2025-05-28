@@ -17,7 +17,7 @@ export default function NewsBlock() {
         if (item.copy_history) {
             return [item.copy_history[0].text, getImgUrl(item.copy_history[0].attachments)]
         } 
-        return [null, null];
+        return [null, null]
     }
 
     function getImgUrl(attachments = 'unknown') {
@@ -63,39 +63,51 @@ export default function NewsBlock() {
 
     useEffect(() => {
         async function fetchData() {
-            await axios.get('https://esaytar.github.io/tspk/data.json')
-            .then(res => {
-                const newsItems = res.data.response.items.map((item, index) => {
-                    let cutNumber = 4
+            try {
+                const response = await axios.get('/api/vk-news?count=100');
+                if (!response.data.success || !response.data.response?.items) throw new Error(response.data.error || 'Некорректная структура данных')
+
+                const newsItems = response.data.response.items.map((item, index) => {
+                    let cutNumber = 4;
+                    
                     const findNullImage = () => {
-                        if (item.attachments.length > 0) {
-                            cutNumber = item.attachments.length % 2 === 0 || item.attachments.length === 1 
+                        if (item.attachments?.length > 0) {
+                        cutNumber = item.attachments.length % 2 === 0 || item.attachments.length === 1 
                             ? item.attachments.length : item.attachments.length - 1
                             return item.attachments
                         } 
-                        else if (!item.attachments.length && !item.copy_history) return
-                        else return null
-                    }
+                        else if (!item.attachments?.length && !item.copy_history) return null
+                        return null
+                    };
                     
                     const urlArray = getImgUrl(findNullImage())
-                    cutNumber = cutNumber <= 4 ? cutNumber : 4 
+                    cutNumber = Math.min(cutNumber, 4)
                     const [repostText, urlRepost] = checkRepost(item)
-                    return (<swiper-slide key={index}>
-                        <NewsCard
-                            text={repostText !== null ? repostText : item.text}
-                            date={convertToNormalDate(item.date)}
-                            link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
-                            img={urlArray === null ? urlRepost.slice(0, cutNumber) : urlArray.slice(0, cutNumber)}
-                        /> 
-                    </swiper-slide>
-                )})
-                setNews(newsItems)
-            }).catch(err => {
-                setNews(<p className='text-[1.5rem] text-center text-gray-main-text w-full'>Новости на данный момент недоступны</p>)
-                console.error('There was a problem with your fetch operation:', err);
-            })
+                    
+                    return (
+                        <swiper-slide key={`${item.id}_${index}`}>
+                            <NewsCard
+                                text={repostText !== null ? repostText : item.text}
+                                date={convertToNormalDate(item.date)}
+                                // link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
+                                img={urlArray !== null ? urlArray.slice(0, cutNumber) : urlRepost?.slice(0, cutNumber)}
+                            />
+                        </swiper-slide>
+                    );
+                });
+                
+                setNews(newsItems);
+            } catch (err) {
+                console.error('Full Error:', err.response?.data || err.message)
+                setNews(
+                    <p className='text-[1.5rem] text-center text-gray-main-text w-full'>
+                        Новости на данный момент недоступны 
+                    </p>
+                );
+            }
         }
-        fetchData();
+    
+        fetchData()
     }, [])
 
     const convertToNormalDate = (num) => {

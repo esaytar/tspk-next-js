@@ -91,7 +91,7 @@ export default function Header({children}) {
                 </button>
                 <MenuMobile status={dropdown.isMobileOpen ? 'active' : ''}>
                     {children}
-                </MenuMobile>    
+                </MenuMobile>
             </header>
         </div>
     )
