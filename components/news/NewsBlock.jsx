@@ -64,8 +64,17 @@ export default function NewsBlock() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('/api/vk-news?count=100');
-                if (!response.data.success || !response.data.response?.items) throw new Error(response.data.error || 'Некорректная структура данных')
+                const response = await fetch('/api/vk-news?count=100');
+      
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (!result.success) {
+                    throw new Error(result.error || 'Invalid data format');
+                }
 
                 const newsItems = response.data.response.items.map((item, index) => {
                     let cutNumber = 4;
@@ -98,7 +107,7 @@ export default function NewsBlock() {
                 
                 setNews(newsItems);
             } catch (err) {
-                console.error('Full Error:', err.response?.data || err.message)
+                console.error('News load failed:', err);
                 setNews(
                     <p className='text-[1.5rem] text-center text-gray-main-text w-full'>
                         Новости на данный момент недоступны 
