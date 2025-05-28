@@ -61,63 +61,53 @@ export default function NewsBlock() {
         return url
     }
 
-    useEffect(() => {
+     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('/api/vk-news?count=100');
-      
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const result = await response.json();
+                const response = await axios.get('/api/vk-news');
+                const items = response.data?.response?.items || [];
                 
-                if (!result.success) {
-                    throw new Error(result.error || 'Invalid data format');
-                }
-
-                const newsItems = response.data.response.items.map((item, index) => {
-                    let cutNumber = 4;
-                    
-                    const findNullImage = () => {
-                        if (item.attachments?.length > 0) {
-                        cutNumber = item.attachments.length % 2 === 0 || item.attachments.length === 1 
-                            ? item.attachments.length : item.attachments.length - 1
-                            return item.attachments
-                        } 
-                        else if (!item.attachments?.length && !item.copy_history) return null
-                        return null
-                    };
-                    
-                    const urlArray = getImgUrl(findNullImage())
-                    cutNumber = Math.min(cutNumber, 4)
-                    const [repostText, urlRepost] = checkRepost(item)
-                    
-                    return (
-                        <swiper-slide key={`${item.id}_${index}`}>
-                            <NewsCard
-                                text={repostText !== null ? repostText : item.text}
-                                date={convertToNormalDate(item.date)}
-                                // link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
-                                img={urlArray !== null ? urlArray.slice(0, cutNumber) : urlRepost?.slice(0, cutNumber)}
-                            />
+                const newsItems = items.map((item, index) => {
+                let cutNumber = 4;
+                
+                const findNullImage = () => {
+                    if (item.attachments?.length > 0) {
+                    cutNumber = item.attachments.length % 2 === 0 || item.attachments.length === 1 
+                        ? item.attachments.length : item.attachments.length - 1;
+                        return item.attachments;
+                    } 
+                    return null;
+                };
+                
+                const urlArray = getImgUrl(findNullImage()) || [];
+                cutNumber = Math.min(cutNumber, 4);
+                const [repostText, urlRepost] = checkRepost(item) || [null, []];
+                
+                return (
+                    <swiper-slide key={`${item.id}_${index}`}>
+                        <NewsCard
+                            text={repostText || item.text || ''}
+                            date={convertToNormalDate(item.date) || ''}
+                            link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
+                            img={urlArray.length ? urlArray : (urlRepost || [])}
+                        />
                         </swiper-slide>
                     );
                 });
                 
-                setNews(newsItems);
+                setNews(newsItems.length ? newsItems : <p>Новости не найдены</p>);
+                
             } catch (err) {
-                console.error('News load failed:', err);
                 setNews(
                     <p className='text-[1.5rem] text-center text-gray-main-text w-full'>
-                        Новости на данный момент недоступны 
+                        Ошибка загрузки: {err.message}
                     </p>
                 );
             }
         }
-    
-        fetchData()
-    }, [])
+        
+        fetchData();
+  }, []);
 
     const convertToNormalDate = (num) => {
         const date = new Date(num * 1000)
