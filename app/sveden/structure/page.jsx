@@ -1,10 +1,9 @@
 import { structureInfo } from '../../../content/collegeInfo';
 import InfoString from '../../../components/infoPages/InfoString';
 
-const title = 'Структура и сведения об образовательной организации'
 
 export const metadata = {
-  title: title,
+//   title: 'Структура и сведения об образовательной организации',
   description: "",
 };
 

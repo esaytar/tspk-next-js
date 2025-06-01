@@ -1,10 +1,8 @@
 import { documentsInfo } from '../../../content/collegeInfo';
 import InfoString from '../../../components/infoPages/InfoString';
 
-const title = 'Документы'
-
 export const metadata = {
-  title: title,
+  title: 'Документы',
   description: "",
 };
 

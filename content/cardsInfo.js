@@ -70,7 +70,7 @@ const cardsInfo = [
     {
         name: 'Заказать справку',
         image: docs,
-        link: 'https://forms.yandex.ru/u/624426f8af261e15d298638a/'
+        link: ''
     }
 ]
 

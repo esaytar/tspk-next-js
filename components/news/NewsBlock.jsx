@@ -5,8 +5,8 @@ import { register } from 'swiper/element/bundle'
 import alternative from '@/img/alternative.jpg'
 import axios from 'axios'
 import ArrowSmall from '../ui/ArrowSmall'
-const NewsModal = dynamic(() => import('./NewsModal'))
 import dynamic from 'next/dynamic'
+const NewsModal = dynamic(() => import('./NewsModal'))
 
 register();
 
@@ -64,45 +64,41 @@ export default function NewsBlock() {
      useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('/api/vk-news');
-                const items = response.data?.response?.items || [];
-                
+                const response = await axios.get('/api/vk-news')
+                const items = response.data?.response?.items || []
                 const newsItems = items.map((item, index) => {
-                let cutNumber = 4;
-                
-                const findNullImage = () => {
-                    if (item.attachments?.length > 0) {
-                    cutNumber = item.attachments.length % 2 === 0 || item.attachments.length === 1 
-                        ? item.attachments.length : item.attachments.length - 1;
-                        return item.attachments;
-                    } 
-                    return null;
-                };
-                
-                const urlArray = getImgUrl(findNullImage()) || [];
-                cutNumber = Math.min(cutNumber, 4);
-                const [repostText, urlRepost] = checkRepost(item) || [null, []];
-                
-                return (
-                    <swiper-slide key={`${item.id}_${index}`}>
-                        <NewsCard
-                            text={repostText || item.text || ''}
-                            date={convertToNormalDate(item.date) || ''}
-                            link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
-                            img={urlArray.length ? urlArray : (urlRepost || [])}
-                        />
+                    let cutNumber = 4;
+                    const findNullImage = () => {
+                        if (item.attachments?.length > 0) {
+                            cutNumber = item.attachments.length % 2 === 0 || item.attachments.length === 1 
+                                ? item.attachments.length : item.attachments.length - 1
+
+                            return item.attachments
+                        } 
+                        return null
+                    }
+                    const urlArray = getImgUrl(findNullImage()) || []
+                    cutNumber = Math.min(cutNumber, 4)
+                    const [repostText, urlRepost] = checkRepost(item) || [null, []]
+                    return (
+                        <swiper-slide key={`${item.id}_${index}`}>
+                            <NewsCard
+                                text={repostText || item.text || ''}
+                                date={convertToNormalDate(item.date) || ''}
+                                link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
+                                img={urlArray.length ? urlArray : (urlRepost || [])}
+                            />
                         </swiper-slide>
-                    );
-                });
-                
-                setNews(newsItems.length ? newsItems : <p>Новости не найдены</p>);
-                
+                    )
+                })
+                setNews(newsItems.length ? newsItems : <p>Новости не найдены</p>)
             } catch (err) {
+                console.log(err.message)
                 setNews(
                     <p className='text-[1.5rem] text-center text-gray-main-text w-full'>
-                        Ошибка загрузки: {err.message}
+                        Новости на данный момент недоступны
                     </p>
-                );
+                )
             }
         }
         

@@ -1,10 +1,10 @@
 'use client'
-import useOpenSidebar from "../../store/useOpenSidebar"
+import useOpenElement from "../../store/useOpenElement"
 
 export default function EmptyBlock() {
-    const sidebar = useOpenSidebar()
+    const element = useOpenElement()
     return (
-        <div className={`${sidebar.isOpen ? 'min-w-[511px]' : 'min-w-[90px]'} 
+        <div className={`${element.isOpenSidebar ? 'min-w-[511px]' : 'min-w-[90px]'} 
                 self-stretch hidden h-screen bg-[#111] lg:block p-7.5 lg:px-5 lg:py-5 z-40
                 transition-all duration-500 cubic-bezier(0.65,0,0.35,1)`}/>
     )

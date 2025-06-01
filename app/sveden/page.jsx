@@ -2,23 +2,19 @@ import LogoTSPK from '../../components/ui/icons/LogoTSPK'
 import { basicInfo } from '../../content/collegeInfo';
 import InfoString from '../../components/infoPages/InfoString';
 
-const title = 'Основные сведения'
-
 export const metadata = {
-  title: title,
+  title: 'Основные сведения',
   description: "",
 };
 
 export default function Sveden() {
-
     return (
         <div className='text-18 flex flex-col gap-[1.88rem]'>
             <LogoTSPK styles='fill-gray-main-text w-[79px] h-[59px]'/>
             {basicInfo.map((item, index) => (
                 <InfoString 
                     title={item.title}
-                    key={index}
-                >
+                    key={index}>
                     {Array.isArray(item.content) ? (
                         item.content.map((contentItem, index) => 
                             <div key={index} className='px-2.5 flex flex-col gap-5'>{contentItem}</div>

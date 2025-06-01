@@ -2,17 +2,17 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation"
 import useDropdown from "../store/useDropdown";
-import useOpenSidebar from "../store/useOpenSidebar";
+import useOpenElement from "../store/useOpenElement";
 
 const CheckRedirectFunc = () => {
     const pathname = usePathname()
     const dropdown = useDropdown()
-    const sidebar = useOpenSidebar()
+    const element = useOpenElement()
 
     useEffect(() => {
         dropdown.close()
         dropdown.closeMobile()
-        sidebar.close()
+        element.closeSidebar()
     }, [pathname])
 }
 

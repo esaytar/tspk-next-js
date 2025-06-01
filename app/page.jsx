@@ -1,3 +1,4 @@
+import ChooseDocModal from "../components/ChooseDocModal";
 import ContactsBlock from "../components/Contacts/ContactsBlock";
 import DirectionEdBlock from "../components/DirectionEdBlock";
 import HeadBlock from "../components/HeadBlock/HeadBlock";
@@ -13,6 +14,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col gap-[1.43rem] px-[1.42rem] w-full xl:w-[73%] md:gap-[3.75rem] xl:p-0 2xl:min-w-328 lg:max-w-[80rem] relative">
         <QuickAccessBlock/>
+        <ChooseDocModal/>
         <DirectionEdBlock/>
         <NewsBlock/>
         <ContactsBlock/>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "app/page.jsx",
+    "url": "/",
+    "title": "App",
+    "content": "import ContactsBlock from \"../components/Contacts/ContactsBlock\"; import DirectionEdBlock from \"../components/DirectionEdBlock\"; import HeadBlock from \"../components/HeadBlock/HeadBlock\"; import NewsBlock from \"../components/news/NewsBlock\"; import QuickAccessBlock from \"../components/QuickAccessBlock\"; import Search from \"../components/Search\"; export default function Home() { return ( <> ); }"
+  },
+  {
+    "id": "app/applicants/page.jsx",
+    "url": "/applicants",
+    "title": "Абитуриентам",
+    "content": "import CollegeInfoCard from '../../components/CollegeInfoCard' import CollegeHeroBlock from '../../components/CollegeHeroBlock/CollegeHeroBlock' import obshchaga from '@/img/college_images/hostel-image.jpg' import statistika from '@/img/college_images/statistika-image.jpg' import komissiya from '@/img/college_images/priemnaya-komissiya-image.jpg' import prof from '@/img/college_images/proforientaciya-image.jpg' import specialties from '@/img/college_images/specialties-image.jpg' import spisok fr"
+  },
+  {
+    "id": "app/contacts/page.jsx",
+    "url": "/contacts",
+    "title": "Контакты",
+    "content": "import ContactsCorpus from \"../../components/Contacts/ContactsCorpus\"; import dynamic from \"next/dynamic\"; import ContactsForm from \"../../components/Contacts/ContactsForm\"; const Map = dynamic(() => import('../../components/ui/Map')) export const metadata = { title: \"Контакты\", description: \"\", }; export default function Contacts() { const corpNames = ['1 КОРПУС (Мурысева 84)', '2 КОРПУС (Ленинградская 28)'] return ( <> Контакты {corpNames.map((i, index) => )} Для соединения с остальными служба"
+  },
+  {
+    "id": "app/dem-exam/page.jsx",
+    "url": "/dem-exam",
+    "title": "Демонстрационный экзамен",
+    "content": "import DemExamCard from '../../components/DemExamCard' import childIMG from '@/img/dem-exam-images/children_w_teacher.jpg' import commerce from '@/img/dem-exam-images/commerce.jpg' import dopEduc from '@/img/dem-exam-images/dop_education.jpg' import school from '@/img/dem-exam-images/school.jpg' import socialWork from '@/img/dem-exam-images/social-work.jpg' import specialChild from '@/img/dem-exam-images/special_children.jpg' import sport from '@/img/dem-exam-images/sport.jpg' import web from '@"
+  },
+  {
+    "id": "app/pages/page.jsx",
+    "url": "/pages",
+    "title": "Pages",
+    "content": " 'use client'; import { useEffect, useState } from 'react'; export default function DocsPage() { const [docs, setDocs] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => { const fetchDocs = async () => { try { const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/docs?populate=*`); const { data } = await res.json(); setDocs(data || []); } catch (error) { console.error('Error loading documents:', error); } finally { setLoading(false); } }; fetchDocs(); }, ["
+  },
+  {
+    "id": "app/students/page.jsx",
+    "url": "/students",
+    "title": "Студентам",
+    "content": "import CollegeInfoCard from '../../components/CollegeInfoCard' import CollegeHeroBlock from '../../components/CollegeHeroBlock/CollegeHeroBlock' import ege from '@/img/college_images/ege-image.jpg' import perevod from '@/img/college_images/mesta-dlya-perevoda.jpg' import raspisanie from '@/img/college_images/raspisanie.jpg' import rabota from '@/img/college_images/trudoustroistvo.jpg' import bg from '@/img/main-students.jpg' export const metadata = { title: \"Студентам\", description: \"\", }; const"
+  },
+  {
+    "id": "app/sveden/page.jsx",
+    "url": "/sveden",
+    "title": "Основные сведения",
+    "content": "import LogoTSPK from '../../components/ui/icons/LogoTSPK' import { basicInfo } from '../../content/collegeInfo'; import InfoString from '../../components/infoPages/InfoString'; export const metadata = { title: 'Основные сведения', description: \"\", }; export default function Sveden() { return ( {basicInfo.map((item, index) => ( {Array.isArray(item.content) ? ( item.content.map((contentItem, index) => {contentItem} ) ) : ( {item.content} )} ))} Вся представленная на данной странице информация полн"
+  },
+  {
+    "id": "app/teachers/page.jsx",
+    "url": "/teachers",
+    "title": "Преподавателям",
+    "content": "import CollegeInfoCard from '../../components/CollegeInfoCard' import temps from '@/img/college_images/templates-image.jpg' import recoms from '@/img/college_images/recommendations-image.jpg' import criteria from '@/img/college_images/criteria-image.jpg' import CollegeHeroBlock from '../../components/CollegeHeroBlock/CollegeHeroBlock' import bg from '@/img/main-teacher.jpg' export const metadata = { title: \"Преподавателям\", description: \"\", }; const pageCardsInfos = [ { urlImage: temps, text: <>"
+  },
+  {
+    "id": "app/sveden/documents/page.jsx",
+    "url": "/sveden/documents",
+    "title": "Документы",
+    "content": "import { documentsInfo } from '../../../content/collegeInfo'; import InfoString from '../../../components/infoPages/InfoString'; export const metadata = { title: 'Документы', description: \"\", }; export default function Documents() { return ( {documentsInfo.map((item, index) => ( {Array.isArray(item.content) ? ( item.content.map((contentItem, index) => {contentItem} ) ) : ( {item.content} )} ))} Проверяющая организация Тема проверки Дата проведения проверки Итоги проверки, предписания Устранения "
+  },
+  {
+    "id": "app/sveden/structure/page.jsx",
+    "url": "/sveden/structure",
+    "title": "Структура и сведения об образовательной организации",
+    "content": "import { structureInfo } from '../../../content/collegeInfo'; import InfoString from '../../../components/infoPages/InfoString'; export const metadata = { title: 'Структура и сведения об образовательной организации', description: \"\", }; export default function Structure() { return ( {structureInfo.map((item, index) => ( {Array.isArray(item.content) ? ( item.content.map((contentItem, index) => {contentItem} ) ) : ( {item.content} )} ))} ) }"
+  }
+]

@@ -17,8 +17,8 @@ export default function HeadingInfoPage({titlePage, type}) {
     }, [pathname])
 
     useEffect(() => {
-        setTitleList(document.title)
-    }, [titleList])
+        setTitleList(titlePage)
+    }, [pathname, titleList])
 
     useEffect(() => {
         function handleClickOutside(event) {

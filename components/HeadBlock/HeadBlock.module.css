@@ -1,23 +1,13 @@
-.picture {
-    background-image: url('../../public/images/tspk.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.marquee {
+    animation: marquee 25s linear infinite;
+    will-change: transform;
 }
 
-.picture::before {
-    content: '';
-    z-index: -5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-    .image {
-        width: 21px;
-        height: 21px;
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
