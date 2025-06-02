@@ -1,25 +1,23 @@
-import { structureInfo } from '@/content/collegeInfo';
+import { templatesDocs } from '@/content/teachersInfo';
 import InfoString from '@/components/infoPages/InfoString';
 
 export const metadata = {
-    title: 'Структура и сведения об образовательной организации',
-    description: "",
+  title: "Шаблоны документов",
+  description: "",
 };
-
-export default function Structure() {
+export default function DocumentsTemplatesPage() {
     return (
         <div className='text-18 flex flex-col gap-[1.88rem]'>
-            {structureInfo.map((item, index) => (
+            {templatesDocs.map((item, index) => (
                 <InfoString 
                     title={item.title}
-                    key={index}
-                >
+                    key={index}>
                     {Array.isArray(item.content) ? (
                         item.content.map((contentItem, index) => 
-                            <div key={index} className='px-2.5 flex flex-col gap-5'>{contentItem}</div>
+                            <div key={index} className='px-2.5 flex flex-col gap-5' >{contentItem}</div>
                         )
                     ) : (
-                        <div>{item.content}</div>
+                        <div className='px-2.5'>{item.content}</div>
                     )}
                 </InfoString>
             ))}

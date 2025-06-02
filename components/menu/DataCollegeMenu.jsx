@@ -25,11 +25,16 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Образовательные стандарты и требования',
-            link: '/sveden/standarts'
+            link: '/sveden/edu-standarts'
         },
         {
             classes: true,
-            value: 'Руководство. Педагогический (научно-педагогический) состав',
+            value: 'Руководство',
+            link: '/sveden/employees'
+        },
+        {
+            classes: true,
+            value: 'Педагогический состав',
             link: '/sveden/'
         },
         {
@@ -45,7 +50,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Платные образовательные услуги',
-            link: '/sveden/paid-edu-services'
+            link: '/sveden/paid_edu'
         },
         {
             classes: false,
@@ -65,7 +70,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Международное сотрудничество',
-            link: '/sveden/international-cooperation'
+            link: '/sveden/mezhdunarodnoe-sotrudnichestvo'
         },
     ]
 

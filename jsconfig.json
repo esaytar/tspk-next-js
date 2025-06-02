@@ -4,6 +4,8 @@
       "@/img/*": ["/public/images/*"],
       "@/app/*": ["/app/*"],
       "@/lib/*": ["/lib/*"],
+      "@/components/*": ["/components/*"],
+      "@/content/*": ["/content/*"],
     }
   }
 }

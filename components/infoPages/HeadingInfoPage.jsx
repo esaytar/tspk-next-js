@@ -6,7 +6,7 @@ import BPOOMenu from '../menu/BPOOMenu'
 import Teachers from '../menu/collegeMenu/Teachers'
 import { usePathname } from 'next/navigation'
 
-export default function HeadingInfoPage({titlePage, type}) {
+export default function HeadingInfoPage({titlePage, title, type}) {
     const [isOpened, setIsOpened] = useState(false)
     const pathname = usePathname()
     const listRef = useRef()
@@ -17,7 +17,7 @@ export default function HeadingInfoPage({titlePage, type}) {
     }, [pathname])
 
     useEffect(() => {
-        setTitleList(titlePage)
+        setTitleList(title)
     }, [pathname, titleList])
 
     useEffect(() => {

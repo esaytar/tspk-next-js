@@ -8,15 +8,15 @@ export default function Teachers({styles, main, color}) {
         },
         {
             value: 'Шаблоны документов',
-            link: '/teachers/docs'
+            link: '/teachers/documents-templates'
         },
         {
             value: 'Методические рекомендации преподавателям',
-            link: '/teachers/instructions'
+            link: '/teachers/teachers-recommendations'
         },
         {
             value: 'Критерии назначения стимулирующих выплат',
-            link: '/teachers/criteria-payments'
+            link: '/teachers/criteria-incentive-payments'
         },
     ]
 

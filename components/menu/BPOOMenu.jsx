@@ -10,12 +10,12 @@ export default function BPOOMenu({ulID, index, main, liW, color}) {
         {
             classes: true,
             value: 'Материально-техническое обеспечение обучающихся с ограниченными возможностями здоровья и инвалидностью',
-            link: '/bpoo/material-provision'
+            link: '/bpoo/materialno-tekhnicheskoe-obespechenie-obuchayushchikhsya-s-ogranichennymi-vozmozhnostyami-zdorovya-i-invalidnostyu'
         },
         {
             classes: true,
             value: 'Учебно-методическое обеспечение инклюзивного образования',
-            link: '/bpoo/education-provision'
+            link: '/bpoo/uchebno-metodicheskoe-obespechenie-inklyuzivnogo-obrazovaniya'
         },
         {
             classes: false,
@@ -30,7 +30,7 @@ export default function BPOOMenu({ulID, index, main, liW, color}) {
     ]
 
     return (
-        <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col text-[0.875rem] gap-2.5 ${main}`}>
+        <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col gap-2.5 ${main}`}>
             {items.map((item, index) => (
                 <li className={`${item.classes && liW ? liW : ''} w-fit`} key={index}>
                     <Link href={item.link} className={`${color === undefined ? 'text-white/60 hover:text-white' : color}`}>

@@ -18,10 +18,9 @@ export default function Search() {
       setSearchResults([]);
       return;
     }
-
     const found = index.filter(page => 
-      page.title.toLowerCase().includes(query.toLowerCase()) || 
-      page.content.toLowerCase().includes(query.toLowerCase())
+      page.title.toLowerCase().includes(query.toLowerCase())
+      // || page.content.toLowerCase().includes(query.toLowerCase()) 
     );
     
     setSearchResults(found.slice(0, 5)); 
@@ -33,7 +32,7 @@ export default function Search() {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Поиск"
+        placeholder="Поиск" 
         className={`bg-transparent text-white w-full transition-all duration-300 `}
       />
       {searchResults.length && (

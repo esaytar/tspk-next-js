@@ -1,8 +1,8 @@
-import CollegeInfoCard from '../../components/CollegeInfoCard'
+import CollegeInfoCard from '@/components/CollegeInfoCard'
 import temps from '@/img/college_images/templates-image.jpg'
 import recoms from '@/img/college_images/recommendations-image.jpg'
 import criteria from '@/img/college_images/criteria-image.jpg'
-import CollegeHeroBlock from '../../components/CollegeHeroBlock/CollegeHeroBlock'
+import CollegeHeroBlock from '@/components/CollegeHeroBlock/CollegeHeroBlock'
 import bg from '@/img/main-teacher.jpg'
 
 export const metadata = {
@@ -19,12 +19,12 @@ const pageCardsInfos = [
     {
         urlImage: recoms,
         text: 'Методические рекомендации преподавателям',
-        link: '/teachers/recommendations'
+        link: '/teachers/teachers-recommendations'
     },
     {
         urlImage: criteria,
         text: 'Критерии назначения стимулирующих выплат',
-        link: '/teachers/plus-k-zp'
+        link: '/teachers/criteria-incentive-payments'
     },
 ]
 
