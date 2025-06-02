@@ -12,7 +12,7 @@ export default function Applicants({styles, color}) {
         },
         {
             value: 'Специальности',
-            link: '/applicants/spisok'
+            link: '/applicants/specialties'
         },
         {
             value: 'Общежитие',
@@ -28,7 +28,7 @@ export default function Applicants({styles, color}) {
         },
         {
             value: 'Статистика поданных заявлений 2023',
-            link: '/applicants/statistika'
+            link: '/applicants/statistic'
         },
     ]
 

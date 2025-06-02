@@ -2,7 +2,7 @@ import { structureInfo } from '@/content/collegeInfo';
 import InfoString from '@/components/infoPages/InfoString';
 
 export const metadata = {
-    title: 'Структура и сведения об образовательной организации',
+    title: 'Структура и органы управления образовательной организацией',
     description: "",
 };
 

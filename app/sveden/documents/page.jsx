@@ -28,12 +28,12 @@ export default function Documents() {
                         <div className='overflow-auto'>
                             <table className='border-spacing-2 table-fixed text-[1.14rem] lg:text-18'>
                                 <thead>
-                                    <tr className='text-mainBlue w-full'>
-                                        <th className='bg-mainBlue/5 relative px-2.5 py-1 w-[24%]'>Проверяющая организация</th>
-                                        <th className='bg-mainBlue/5 relative px-2.5 py-1 w-[20%]'>Тема проверки</th>
-                                        <th className='bg-mainBlue/5 relative px-2.5 py-1 w-[13%]'>Дата проведения проверки</th>
-                                        <th className='bg-mainBlue/5 relative px-2.5 py-1 w-[21%]'>Итоги проверки, предписания</th>
-                                        <th className='bg-mainBlue/5 relative px-2.5 py-1 w-[21.5%]'>Устранения нарушений</th>
+                                    <tr className='text-main-blue w-full'>
+                                        <th className='bg-main-blue/5 font-medium relative px-2.5 py-1 w-[24%]'>Проверяющая организация</th>
+                                        <th className='bg-main-blue/5 font-medium relative px-2.5 py-1 w-[20%]'>Тема проверки</th>
+                                        <th className='bg-main-blue/5 font-medium relative px-2.5 py-1 w-[13%]'>Дата проведения проверки</th>
+                                        <th className='bg-main-blue/5 font-medium relative px-2.5 py-1 w-[21%]'>Итоги проверки, предписания</th>
+                                        <th className='bg-main-blue/5 font-medium relative px-2.5 py-1 w-[21.5%]'>Устранения нарушений</th>
                                     </tr>
                                 </thead>
                                 <tbody>

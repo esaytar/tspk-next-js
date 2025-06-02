@@ -20,7 +20,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Образование',
-            link: '/sveden/'
+            link: ''
         },
         {
             classes: false,
@@ -35,17 +35,17 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: true,
             value: 'Педагогический состав',
-            link: '/sveden/'
+            link: ''
         },
         {
             classes: true,
             value: 'Материально-техническое обеспечение и оснащенность образовательного процесса',
-            link: '/sveden/'
+            link: ''
         },
         {
             classes: true,
             value: 'Стипендии и иные виды материальной поддержки',
-            link: '/sveden/'
+            link: ''
         },
         {
             classes: false,
@@ -55,17 +55,17 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Финансово-хозяйственная деятельность',
-            link: '/sveden/'
+            link: ''
         },
         {
             classes: true,
             value: 'Вакантные места для приема (перевода) обучающихся',
-            link: '/sveden/'
+            link: ''
         },
         {
             classes: false,
             value: 'Доступная среда',
-            link: '/sveden/'
+            link: ''
         },
         {
             classes: false,

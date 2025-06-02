@@ -5,10 +5,12 @@ import DataCollegeMenu from '../menu/DataCollegeMenu'
 import BPOOMenu from '../menu/BPOOMenu'
 import Teachers from '../menu/collegeMenu/Teachers'
 import { usePathname } from 'next/navigation'
+import { useTitleStore } from '../../store/useGetCurrentTitleInfoPages'
 
-export default function HeadingInfoPage({titlePage, title, type}) {
+export default function HeadingInfoPage({titlePage, type}) {
     const [isOpened, setIsOpened] = useState(false)
     const pathname = usePathname()
+    const title = useTitleStore((state) => state.title);
     const listRef = useRef()
     const [titleList, setTitleList] = useState('')
 

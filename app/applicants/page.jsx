@@ -26,8 +26,8 @@ const pageCardsInfos = [
     },
     {
         urlImage: statistika,
-        text: 'Статистика поданных заявлений 2024',
-        link: '/applicants/statistika'
+        text: <>Статистика поданных заявлений <br/> 2024</>,
+        link: '/applicants/statistics'
     },
     {
         urlImage: specialties,
