@@ -40,16 +40,6 @@
     "title": "Преподавателям"
   },
   {
-    "id": "app/applicants/specialties/page.jsx",
-    "url": "/applicants/specialties",
-    "title": "Специальности"
-  },
-  {
-    "id": "app/applicants/statistics/page.jsx",
-    "url": "/applicants/statistics",
-    "title": "Статистика поданных заявлений 2024"
-  },
-  {
     "id": "app/bpoo/conferences/page.jsx",
     "url": "/bpoo/conferences",
     "title": "Конференции | БПОО"
@@ -73,6 +63,16 @@
     "id": "app/bpoo/useful-links/page.jsx",
     "url": "/bpoo/useful-links",
     "title": "Полезные ссылки | БПОО"
+  },
+  {
+    "id": "app/applicants/specialties/page.jsx",
+    "url": "/applicants/specialties",
+    "title": "Специальности"
+  },
+  {
+    "id": "app/applicants/statistics/page.jsx",
+    "url": "/applicants/statistics",
+    "title": "Статистика поданных заявлений 2024"
   },
   {
     "id": "app/sveden/documents/page.jsx",
