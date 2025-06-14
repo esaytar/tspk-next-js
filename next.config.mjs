@@ -18,7 +18,7 @@ const nextConfig = {
         ]
     },
     basePath: '/tspk-next-js', 
-    assetPrefix: '/tspk-next-js/', 
+    assetPrefix: '/tspk-next-js', 
 };
 
 export default nextConfig;
