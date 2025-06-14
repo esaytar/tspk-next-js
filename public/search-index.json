@@ -5,14 +5,14 @@
     "title": "App"
   },
   {
-    "id": "app/contacts/page.jsx",
-    "url": "/contacts",
-    "title": "Контакты"
-  },
-  {
     "id": "app/applicants/page.jsx",
     "url": "/applicants",
     "title": "Абитуриентам"
+  },
+  {
+    "id": "app/contacts/page.jsx",
+    "url": "/contacts",
+    "title": "Контакты"
   },
   {
     "id": "app/dem-exam/page.jsx",
@@ -20,14 +20,14 @@
     "title": "Демонстрационный экзамен"
   },
   {
-    "id": "app/students/page.jsx",
-    "url": "/students",
-    "title": "Студентам"
-  },
-  {
     "id": "app/pages/page.jsx",
     "url": "/pages",
     "title": "Pages"
+  },
+  {
+    "id": "app/students/page.jsx",
+    "url": "/students",
+    "title": "Студентам"
   },
   {
     "id": "app/sveden/page.jsx",
@@ -38,6 +38,16 @@
     "id": "app/teachers/page.jsx",
     "url": "/teachers",
     "title": "Преподавателям"
+  },
+  {
+    "id": "app/applicants/specialties/page.jsx",
+    "url": "/applicants/specialties",
+    "title": "Специальности"
+  },
+  {
+    "id": "app/applicants/statistics/page.jsx",
+    "url": "/applicants/statistics",
+    "title": "Статистика поданных заявлений 2024"
   },
   {
     "id": "app/bpoo/conferences/page.jsx",
@@ -63,16 +73,6 @@
     "id": "app/bpoo/useful-links/page.jsx",
     "url": "/bpoo/useful-links",
     "title": "Полезные ссылки | БПОО"
-  },
-  {
-    "id": "app/applicants/specialties/page.jsx",
-    "url": "/applicants/specialties",
-    "title": "Специальности"
-  },
-  {
-    "id": "app/applicants/statistics/page.jsx",
-    "url": "/applicants/statistics",
-    "title": "Статистика поданных заявлений 2024"
   },
   {
     "id": "app/sveden/documents/page.jsx",
