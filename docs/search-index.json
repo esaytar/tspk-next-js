@@ -40,14 +40,14 @@
     "title": "Преподавателям"
   },
   {
-    "id": "app/applicants/specialties/page.jsx",
-    "url": "/applicants/specialties",
-    "title": "Специальности"
-  },
-  {
     "id": "app/applicants/statistics/page.jsx",
     "url": "/applicants/statistics",
     "title": "Статистика поданных заявлений 2024"
+  },
+  {
+    "id": "app/applicants/specialties/page.jsx",
+    "url": "/applicants/specialties",
+    "title": "Специальности"
   },
   {
     "id": "app/bpoo/conferences/page.jsx",
@@ -110,13 +110,13 @@
     "title": "Критерии назначения стимулирующих выплат"
   },
   {
-    "id": "app/teachers/(main)/teachers-recommendations/page.jsx",
-    "url": "/teachers/(main)/teachers-recommendations",
-    "title": "Методические рекомендации преподавателям"
-  },
-  {
     "id": "app/teachers/(main)/documents-templates/page.jsx",
     "url": "/teachers/(main)/documents-templates",
     "title": "Шаблоны документов"
+  },
+  {
+    "id": "app/teachers/(main)/teachers-recommendations/page.jsx",
+    "url": "/teachers/(main)/teachers-recommendations",
+    "title": "Методические рекомендации преподавателям"
   }
 ]
