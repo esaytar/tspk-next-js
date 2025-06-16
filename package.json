@@ -2,6 +2,7 @@
   "name": "tspk-next",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://esaytar.github.io/tspk-next-js",
   "scripts": {
     "dev": "npm run generate-search-index && next dev",
     "build": "npm run generate-search-index && next build",
