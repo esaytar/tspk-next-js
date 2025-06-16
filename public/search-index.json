@@ -110,13 +110,13 @@
     "title": "Критерии назначения стимулирующих выплат"
   },
   {
-    "id": "app/teachers/(main)/documents-templates/page.jsx",
-    "url": "/teachers/(main)/documents-templates",
-    "title": "Шаблоны документов"
-  },
-  {
     "id": "app/teachers/(main)/teachers-recommendations/page.jsx",
     "url": "/teachers/(main)/teachers-recommendations",
     "title": "Методические рекомендации преподавателям"
+  },
+  {
+    "id": "app/teachers/(main)/documents-templates/page.jsx",
+    "url": "/teachers/(main)/documents-templates",
+    "title": "Шаблоны документов"
   }
 ]
