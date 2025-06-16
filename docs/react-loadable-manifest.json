@@ -1,0 +1,12 @@
+{
+  "components\\menu\\collegeMenu\\ListComponent.jsx -> next/link": {
+    "id": "components\\menu\\collegeMenu\\ListComponent.jsx -> next/link",
+    "files": []
+  },
+  "components\\news\\NewsBlock.jsx -> ./NewsModal": {
+    "id": "components\\news\\NewsBlock.jsx -> ./NewsModal",
+    "files": [
+      "static/chunks/_app-pages-browser_components_news_NewsModal_jsx.js"
+    ]
+  }
+}

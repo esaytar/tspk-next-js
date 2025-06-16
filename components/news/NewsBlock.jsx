@@ -91,7 +91,7 @@ export default function NewsBlock() {
                         </swiper-slide>
                     )
                 })
-                setNews(newsItems.length ? newsItems : <p>Новости не найдены</p>)
+                setNews(newsItems.length ? newsItems : <p className='text-[1.5rem] text-center text-gray-main-text w-full'>Новости не найдены</p>)
             } catch (err) {
                 console.log(err.message)
                 setNews(

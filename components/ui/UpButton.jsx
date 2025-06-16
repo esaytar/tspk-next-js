@@ -10,7 +10,7 @@ export default function UpButton() {
 
         document.getElementById('up').addEventListener('click', onTop)
         
-        return () => buttonToUp.removeEventListener('click', onTop)
+        return () => document.removeEventListener('click', onTop)
     }, [])
 
     useEffect(() => {

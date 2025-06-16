@@ -17,12 +17,10 @@ const nextConfig = {
             },
         ]
     },
-    // basePath: '/tspk-next-js/docs', 
-    // assetPrefix: '/tspk-next-js/docs', 
     images: {
         unoptimized: true,
     },
-    distDir: 'docs',
+    // distDir: 'docs',
 };
 
 export default nextConfig;
