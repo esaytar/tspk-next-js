@@ -10,14 +10,14 @@
     "title": "Абитуриентам"
   },
   {
-    "id": "app/contacts/page.jsx",
-    "url": "/contacts",
-    "title": "Контакты"
-  },
-  {
     "id": "app/dem-exam/page.jsx",
     "url": "/dem-exam",
     "title": "Демонстрационный экзамен"
+  },
+  {
+    "id": "app/contacts/page.jsx",
+    "url": "/contacts",
+    "title": "Контакты"
   },
   {
     "id": "app/pages/page.jsx",
@@ -40,14 +40,14 @@
     "title": "Преподавателям"
   },
   {
-    "id": "app/applicants/specialties/page.jsx",
-    "url": "/applicants/specialties",
-    "title": "Специальности"
-  },
-  {
     "id": "app/applicants/statistics/page.jsx",
     "url": "/applicants/statistics",
     "title": "Статистика поданных заявлений 2024"
+  },
+  {
+    "id": "app/applicants/specialties/page.jsx",
+    "url": "/applicants/specialties",
+    "title": "Специальности"
   },
   {
     "id": "app/bpoo/conferences/page.jsx",
@@ -75,14 +75,14 @@
     "title": "Полезные ссылки | БПОО"
   },
   {
-    "id": "app/sveden/edu-standarts/page.jsx",
-    "url": "/sveden/edu-standarts",
-    "title": "Образовательные стандарты и требования"
-  },
-  {
     "id": "app/sveden/documents/page.jsx",
     "url": "/sveden/documents",
     "title": "Документы"
+  },
+  {
+    "id": "app/sveden/edu-standarts/page.jsx",
+    "url": "/sveden/edu-standarts",
+    "title": "Образовательные стандарты и требования"
   },
   {
     "id": "app/sveden/employees/page.jsx",
