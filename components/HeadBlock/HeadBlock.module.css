@@ -1,13 +1,19 @@
-.marquee {
-    animation: marquee 25s linear infinite;
-    will-change: transform;
+.marqueeContainer {
+  animation: marquee 10s linear infinite;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  left: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
+
 @keyframes marquee {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 12 * 2)); 
+  }
 }
