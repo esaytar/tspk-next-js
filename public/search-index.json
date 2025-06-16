@@ -70,14 +70,14 @@
     "title": "Учебно-методическое обеспечение инклюзивного образования | БПОО"
   },
   {
-    "id": "app/sveden/documents/page.jsx",
-    "url": "/sveden/documents",
-    "title": "Документы"
-  },
-  {
     "id": "app/bpoo/useful-links/page.jsx",
     "url": "/bpoo/useful-links",
     "title": "Полезные ссылки | БПОО"
+  },
+  {
+    "id": "app/sveden/documents/page.jsx",
+    "url": "/sveden/documents",
+    "title": "Документы"
   },
   {
     "id": "app/sveden/edu-standarts/page.jsx",
@@ -110,13 +110,13 @@
     "title": "Критерии назначения стимулирующих выплат"
   },
   {
-    "id": "app/teachers/(main)/documents-templates/page.jsx",
-    "url": "/teachers/(main)/documents-templates",
-    "title": "Шаблоны документов"
-  },
-  {
     "id": "app/teachers/(main)/teachers-recommendations/page.jsx",
     "url": "/teachers/(main)/teachers-recommendations",
     "title": "Методические рекомендации преподавателям"
+  },
+  {
+    "id": "app/teachers/(main)/documents-templates/page.jsx",
+    "url": "/teachers/(main)/documents-templates",
+    "title": "Шаблоны документов"
   }
 ]
