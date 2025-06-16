@@ -17,8 +17,8 @@ const nextConfig = {
             },
         ]
     },
-    basePath: '/tspk-next-js', 
-    assetPrefix: '/tspk-next-js', 
+    basePath: '/tspk-next-js/docs', 
+    assetPrefix: '/tspk-next-js/docs', 
     images: {
         unoptimized: true,
     },
