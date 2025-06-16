@@ -1,0 +1,122 @@
+[
+  {
+    "id": "app/page.jsx",
+    "url": "/",
+    "title": "App"
+  },
+  {
+    "id": "app/applicants/page.jsx",
+    "url": "/applicants",
+    "title": "Абитуриентам"
+  },
+  {
+    "id": "app/contacts/page.jsx",
+    "url": "/contacts",
+    "title": "Контакты"
+  },
+  {
+    "id": "app/dem-exam/page.jsx",
+    "url": "/dem-exam",
+    "title": "Демонстрационный экзамен"
+  },
+  {
+    "id": "app/pages/page.jsx",
+    "url": "/pages",
+    "title": "Pages"
+  },
+  {
+    "id": "app/students/page.jsx",
+    "url": "/students",
+    "title": "Студентам"
+  },
+  {
+    "id": "app/sveden/page.jsx",
+    "url": "/sveden",
+    "title": "Основные сведения"
+  },
+  {
+    "id": "app/teachers/page.jsx",
+    "url": "/teachers",
+    "title": "Преподавателям"
+  },
+  {
+    "id": "app/applicants/specialties/page.jsx",
+    "url": "/applicants/specialties",
+    "title": "Специальности"
+  },
+  {
+    "id": "app/applicants/statistics/page.jsx",
+    "url": "/applicants/statistics",
+    "title": "Статистика поданных заявлений 2024"
+  },
+  {
+    "id": "app/bpoo/conferences/page.jsx",
+    "url": "/bpoo/conferences",
+    "title": "Конференции | БПОО"
+  },
+  {
+    "id": "app/bpoo/documents/page.jsx",
+    "url": "/bpoo/documents",
+    "title": "Документы | БПОО"
+  },
+  {
+    "id": "app/bpoo/materialno-tekhnicheskoe-obespechenie-obuchayushchikhsya-s-ogranichennymi-vozmozhnostyami-zdorovya-i-invalidnostyu/page.jsx",
+    "url": "/bpoo/materialno-tekhnicheskoe-obespechenie-obuchayushchikhsya-s-ogranichennymi-vozmozhnostyami-zdorovya-i-invalidnostyu",
+    "title": "Материально-техническое обеспечение обучающихся с ограниченными возможностями здоровья и инвалидностью | БПОО"
+  },
+  {
+    "id": "app/bpoo/uchebno-metodicheskoe-obespechenie-inklyuzivnogo-obrazovaniya/page.jsx",
+    "url": "/bpoo/uchebno-metodicheskoe-obespechenie-inklyuzivnogo-obrazovaniya",
+    "title": "Учебно-методическое обеспечение инклюзивного образования | БПОО"
+  },
+  {
+    "id": "app/sveden/documents/page.jsx",
+    "url": "/sveden/documents",
+    "title": "Документы"
+  },
+  {
+    "id": "app/bpoo/useful-links/page.jsx",
+    "url": "/bpoo/useful-links",
+    "title": "Полезные ссылки | БПОО"
+  },
+  {
+    "id": "app/sveden/edu-standarts/page.jsx",
+    "url": "/sveden/edu-standarts",
+    "title": "Образовательные стандарты и требования"
+  },
+  {
+    "id": "app/sveden/employees/page.jsx",
+    "url": "/sveden/employees",
+    "title": "Руководство"
+  },
+  {
+    "id": "app/sveden/mezhdunarodnoe-sotrudnichestvo/page.jsx",
+    "url": "/sveden/mezhdunarodnoe-sotrudnichestvo",
+    "title": "Международное сотрудничество"
+  },
+  {
+    "id": "app/sveden/paid_edu/page.jsx",
+    "url": "/sveden/paid_edu",
+    "title": "Платные образовательные услуги"
+  },
+  {
+    "id": "app/sveden/structure/page.jsx",
+    "url": "/sveden/structure",
+    "title": "Структура и органы управления образовательной организацией"
+  },
+  {
+    "id": "app/teachers/(main)/criteria-incentive-payments/page.jsx",
+    "url": "/teachers/(main)/criteria-incentive-payments",
+    "title": "Критерии назначения стимулирующих выплат"
+  },
+  {
+    "id": "app/teachers/(main)/documents-templates/page.jsx",
+    "url": "/teachers/(main)/documents-templates",
+    "title": "Шаблоны документов"
+  },
+  {
+    "id": "app/teachers/(main)/teachers-recommendations/page.jsx",
+    "url": "/teachers/(main)/teachers-recommendations",
+    "title": "Методические рекомендации преподавателям"
+  }
+]
