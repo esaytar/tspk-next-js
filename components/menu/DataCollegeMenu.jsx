@@ -5,47 +5,47 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Основные сведения',
-            link: '/sveden/'
+            link: '/sveden/common'
         },
         {
             classes: true,
             value: 'Структура и органы управления образовательной организацией',
-            link: '/sveden/structure'
+            link: '/sveden/struct'
         },
         {
             classes: false,
             value: 'Документы',
-            link: '/sveden/documents'
+            link: '/sveden/document'
         },
         {
             classes: false,
             value: 'Образование',
-            link: ''
+            link: '/sveden/education'
         },
         {
             classes: false,
             value: 'Образовательные стандарты и требования',
-            link: '/sveden/edu-standarts'
+            link: '/sveden/edustandarts'
         },
         {
             classes: true,
             value: 'Руководство',
-            link: '/sveden/employees'
+            link: '/sveden/managers'
         },
         {
             classes: true,
             value: 'Педагогический состав',
-            link: ''
+            link: '/sveden/employees'
         },
         {
             classes: true,
             value: 'Материально-техническое обеспечение и оснащенность образовательного процесса',
-            link: ''
+            link: '/sveden/objects'
         },
         {
             classes: true,
             value: 'Стипендии и иные виды материальной поддержки',
-            link: ''
+            link: '/sveden/grants'
         },
         {
             classes: false,
@@ -55,22 +55,17 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Финансово-хозяйственная деятельность',
-            link: ''
+            link: '/sveden/budget'
         },
         {
             classes: true,
             value: 'Вакантные места для приема (перевода) обучающихся',
-            link: ''
-        },
-        {
-            classes: false,
-            value: 'Доступная среда',
-            link: ''
+            link: 'sveden/vacant'
         },
         {
             classes: false,
             value: 'Международное сотрудничество',
-            link: '/sveden/mezhdunarodnoe-sotrudnichestvo'
+            link: '/sveden/inter'
         },
     ]
 

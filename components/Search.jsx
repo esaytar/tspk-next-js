@@ -35,7 +35,7 @@ export default function Search() {
         placeholder="Поиск" 
         className={`bg-transparent text-white w-full transition-all duration-300 `}
       />
-      {searchResults.length && (
+      {searchResults.length !== 0  && (
         <div className='w-full absolute bg-[#2B2B2B] top-16.5 left-0 text-white p-4 z-20 rounded-[10px] flex flex-col gap-5'>
           {searchResults.map(page => (
             <div key={page.id} >

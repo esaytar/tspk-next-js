@@ -30,11 +30,6 @@
     "title": "Студентам"
   },
   {
-    "id": "app/sveden/page.jsx",
-    "url": "/sveden",
-    "title": "Основные сведения"
-  },
-  {
     "id": "app/teachers/page.jsx",
     "url": "/teachers",
     "title": "Преподавателям"
@@ -75,24 +70,29 @@
     "title": "Полезные ссылки | БПОО"
   },
   {
-    "id": "app/sveden/documents/page.jsx",
-    "url": "/sveden/documents",
+    "id": "app/sveden/common/page.jsx",
+    "url": "/sveden/common",
+    "title": "Основные сведения"
+  },
+  {
+    "id": "app/sveden/document/page.jsx",
+    "url": "/sveden/document",
     "title": "Документы"
   },
   {
-    "id": "app/sveden/edu-standarts/page.jsx",
-    "url": "/sveden/edu-standarts",
+    "id": "app/sveden/inter/page.jsx",
+    "url": "/sveden/inter",
+    "title": "Международное сотрудничество"
+  },
+  {
+    "id": "app/sveden/edustandarts/page.jsx",
+    "url": "/sveden/edustandarts",
     "title": "Образовательные стандарты и требования"
   },
   {
-    "id": "app/sveden/employees/page.jsx",
-    "url": "/sveden/employees",
+    "id": "app/sveden/managers/page.jsx",
+    "url": "/sveden/managers",
     "title": "Руководство"
-  },
-  {
-    "id": "app/sveden/mezhdunarodnoe-sotrudnichestvo/page.jsx",
-    "url": "/sveden/mezhdunarodnoe-sotrudnichestvo",
-    "title": "Международное сотрудничество"
   },
   {
     "id": "app/sveden/paid_edu/page.jsx",
@@ -100,8 +100,8 @@
     "title": "Платные образовательные услуги"
   },
   {
-    "id": "app/sveden/structure/page.jsx",
-    "url": "/sveden/structure",
+    "id": "app/sveden/struct/page.jsx",
+    "url": "/sveden/struct",
     "title": "Структура и органы управления образовательной организацией"
   },
   {

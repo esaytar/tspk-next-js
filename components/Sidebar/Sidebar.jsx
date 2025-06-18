@@ -60,7 +60,7 @@ export default function Sidebar() {
     ]
 
     return (
-        <div ref={menuRef} onClick={() => element.openSidebar()}
+        <div ref={menuRef} onClick={(e) => {if (e.target === e.currentTarget) element.openSidebar()}}
             className={`menu ${element.isOpenSidebar || dropdown.isMobileOpen ? 'lg:w-[511px]' : 'lg:w-[90px]'} border-black border-0
                 fixed top-0 left-0 h-screen bg-[#111] flex flex-col justify-between p-7.5 lg:px-5 lg:py-5 z-50 w-full
                 transition-all duration-500 cubic-bezier(0.65,0,0.35,1)`}>

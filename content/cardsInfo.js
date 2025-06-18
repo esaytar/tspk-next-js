@@ -15,22 +15,22 @@ const cardsInfo = [
     {
         name: 'Сведения об образовательной организации',
         image: info,
-        link: '/basic-data'
+        link: '/sveden/common'
     },
     {
         name: 'Расписание занятий',
         image: timetable,
-        link: '/error'
+        link: '/students/lessons-schedule'
     },
     {
         name: 'Приемная комиссия',
         image: people,
-        link: '/error'
+        link: '/applicants/priemnaya-comissiya'
     },
     {
         name: 'Наши специальности',
         image: bag,
-        link: '/error'
+        link: '/applicants/specialties'
     },
     {
         name: 'Дополнительное профессиональное образование',
@@ -40,17 +40,17 @@ const cardsInfo = [
     {
         name: 'Проф. мастерство Профессионалы',
         image: wsr,
-        link: '/error'
+        link: '/professionals'
     },
     {
         name: 'Дуальное обучение',
         image: puzzle,
-        link: '/error'
+        link: '/dual-education'
     },
     {
         name: 'Содействие трудойстройству выпускников',
         image: way,
-        link: '/error'
+        link: '/students/rabota'
     },
     {
         name: 'Система дистанционного обучения Moodle',

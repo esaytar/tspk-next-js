@@ -1,7 +1,6 @@
 import Link from "next/link"
 import useOpenElement from '../store/useOpenElement.js'
 
-
 export default function LinkedCard({children, link}) {
     const setIsOpenedModalDoc = useOpenElement((state) => state.setIsOpenedModalDoc)
 

@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link.js'
 import cardsInfo from '../content/cardsInfo.js'
 import LinkedCard from './LinkedCard.jsx'
 import Image from 'next/image.js'
